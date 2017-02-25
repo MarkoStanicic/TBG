@@ -68,7 +68,16 @@
 					<!-- nav -->
 					<nav class="nav" role="navigation">
 						<div class="container">
+
 							<?php html5blank_nav(); ?>
+
+							<ul class="search">
+								<a href="javascript:void(0)">
+									<span class="fa fa-search"></span>
+								</a>
+								<input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="<?php _e( 'To search, type and hit enter.', 'html5blank' ); ?>">
+<!--								<button class="search-submit" type="submit">--><?php //_e( 'Search', 'html5blank' ); ?><!--</button>-->
+							</ul>
 						</div>
 					</nav>
 					<!-- /nav -->
