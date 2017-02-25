@@ -6,8 +6,7 @@
 		$('.search a').on('click', function () {
 			$('.search-input').fadeToggle(300);
 		});
-
-
+		
 
 	});
 
