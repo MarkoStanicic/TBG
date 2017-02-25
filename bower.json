@@ -1,5 +1,5 @@
 {
-  "name": "HTML5Blank",
+  "name": "thebelgradeguide",
   "version": "1.5.0",
   "author": "Todd Motto",
   "devDependencies": {
@@ -8,6 +8,7 @@
     "normalize.css": "~3.0.1"
   },
   "dependencies": {
-    "font-awesome": "fontawesome#^4.7.0"
+    "font-awesome": "fontawesome#^4.7.0",
+    "bootstrap": "3"
   }
 }

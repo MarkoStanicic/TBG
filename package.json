@@ -114,7 +114,9 @@
       "url": "https://github.com/weslleih"
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "^3.6.0",

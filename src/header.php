@@ -30,23 +30,46 @@
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
-		<div class="container">
+		<div class="">
+
+			<!-- social links -->
+			<div class="social">
+				<ul>
+					<li>
+						<a href="#">
+							<span class="fa fa-facebook"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-instagram"></span>
+						</a>
+					</li>
+                    <li>
+                        <a href="#">
+							<span class="fa fa-pinterest"></span>
+                        </a>
+                    </li>
+				</ul>
+			</div><!-- . / endsocial links -->
 
 			<!-- header -->
 			<header class="header clear" role="banner">
-
+				<img src="http://welovebudapest.com/Image/header2.png" alt="">
 					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
+<!--					<div class="logo">-->
+<!--						<a href="--><?php //echo home_url(); ?><!--">-->
+<!--							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
+<!--							<img src="--><?php //echo get_template_directory_uri(); ?><!--/img/logo.svg" alt="Logo" class="logo-img">-->
+<!--						</a>-->
+<!--					</div>-->
 					<!-- /logo -->
 
 					<!-- nav -->
 					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
+						<div class="container">
+							<?php html5blank_nav(); ?>
+						</div>
 					</nav>
 					<!-- /nav -->
 

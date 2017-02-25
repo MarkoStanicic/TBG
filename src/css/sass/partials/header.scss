@@ -3,9 +3,56 @@
  * ---
  */
 
-
+// Social
+.social {
+        background: #f2f2f2;
+        height: 30px;
+        ul {
+                float: right;
+                li {
+                        display: inline-block;
+                        a {
+                                display: block;
+                                min-width: 30px;
+                                height: 30px;
+                                line-height: 30px;
+                        }
+                }
+        }
+}
 // Header container
-.header {}
+.header {
+        .nav {
+                background: rgba(0, 0, 0, 0.5);
+                margin-top: -40px;
+                z-index: 10;
+                position: relative;
+                ul {
+                        li {
+                                display: inline-block;
+                                a {
+                                        color: #fff;
+                                        display: block;
+                                        height: 40px;
+                                        line-height: 40px;
+                                        padding: 0 20px;
+                                        transition: all 0.2s ease;
+                                        text-decoration: none;
+                                        &:hover {
+                                                background: #47b0ed;
+                                                transition: all 0.2s ease;
+                                        }
+                                }
+
+                                &.current_page_item {
+                                        a {
+                                                background: #47b0ed;
+                                        }
+                                }
+                        }
+                }
+        }
+}
 
 // Logo
 .logo {}
