@@ -291,6 +291,30 @@ input[type="search"] {
  * partials/footer
  * ---
  */
+.footer {
+  background: #26272b;
+  color: #fff; }
+  .footer h2 {
+    color: #49abd8; }
+
+.social-footer h3 {
+  border-bottom: 1px solid #6793b0; }
+
+.social-footer ul li {
+  float: left; }
+  .social-footer ul li .fa {
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 6px; }
+  .social-footer ul li .fa-facebook {
+    background: #3c5899;
+    padding: 10px 12px; }
+  .social-footer ul li .fa-instagram {
+    background: #3d739f; }
+  .social-footer ul li .fa-pinterest {
+    background: #cb1a22; }
+
 /**
  * partials/print
  * ---

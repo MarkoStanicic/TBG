@@ -6,7 +6,8 @@
 get_header();
 ?>
 
-
+<div class="container">
+    <div class="row">
         <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
             <!-- article -->
@@ -36,8 +37,20 @@ get_header();
             <!-- /article -->
 
         <?php endif; ?>
+    </div>
 
 
-<?php get_sidebar(); ?>
+</div>
+<div class="container">
+    <?php get_sidebar(); ?>
+</div>
 
-<?php get_footer(); ?>
+
+
+
+
+<?php
+// Get Foot
+get_footer();
+get_template_part('content-footer');
+?>

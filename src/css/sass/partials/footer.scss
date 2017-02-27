@@ -4,4 +4,43 @@
  */
 
 
-.footer {}
+.footer {
+  background: #26272b;
+  color: #fff;
+    
+  h2 {
+    color: #49abd8;
+  }
+
+}
+
+.social-footer {
+  h3 {
+    border-bottom: 1px solid #6793b0;
+  }
+  ul {
+    li {
+      float: left;
+
+      .fa {
+        color: #fff;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 6px;
+      }
+      .fa-facebook {
+        background: #3c5899;
+        padding: 10px 12px;
+      }
+      .fa-instagram {
+        background: #3d739f;
+      }
+      .fa-pinterest {
+        background: #cb1a22;
+      }
+    }
+
+  }
+}
+
+
