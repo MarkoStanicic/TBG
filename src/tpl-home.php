@@ -7,7 +7,6 @@ get_header();
 ?>
 <div id="home" class="">
 
-<<<<<<< HEAD
     <!-- start first section -->
     <section class="first-section pY40">
         <div class="container">
@@ -17,12 +16,6 @@ get_header();
                 <div class="col-sm-7 column">
                     <div class="flexslider">
                         <ul class="slides">
-=======
-<div class="container">
-    <div class="row">
-        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
->>>>>>> 50d34f6cc7e915135a07e0e92e9f248e60ae7e60
-
                             <?php
                                 //== get meta data for category
                                 $key = "Slider First Section";
@@ -370,14 +363,14 @@ get_header();
 
                         </div>
                         <div id="comments" class="toggle hide">
-                            <?php the_widget( 'WP_Widget_Recent_Comments', $instance, $args ); ?>
+                            <?php //the_widget( 'WP_Widget_Recent_Comments', $instance, $args ); ?>
                         </div>
                     </div>
                     <div class="sidebarWidget">
                         <div class="sectionTitle">
                             <ul>
                                 <li>
-                                    <a href="javascript:void(0)" class="active noCursor" id="show_recent">
+                                    <a href="javascript:void(0);" class="active noCursor" id="show_recent">
                                         Povezimo se
                                     </a>
                                 </li>
@@ -428,40 +421,9 @@ get_header();
 <div class="clearfix"></div>
 
 
-    <?php
-    get_footer();
-/*
-    global $post;
-    $args = array( 'posts_per_page' => 150 );
-
-<<<<<<< HEAD
-    $myposts = get_posts( $args );
-    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-        <li>
-            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            <br>
-            <?php the_post_thumbnail(); ?>
-        </li>
-    <?php endforeach;
-    wp_reset_postdata();*/?>
-   
-=======
-        <?php endif; ?>
-    </div>
-
-
-</div>
-<div class="container">
-    <?php get_sidebar(); ?>
-</div>
-
-
-
-
 
 <?php
-// Get Foot
-get_footer();
-get_template_part('content-footer');
+    // Get Foot
+    get_footer();
+    get_template_part('content-footer');
 ?>
->>>>>>> 50d34f6cc7e915135a07e0e92e9f248e60ae7e60
