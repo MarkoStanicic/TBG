@@ -2,10 +2,10 @@
 			<footer class="footer" role="contentinfo">
 
 				<!-- copyright -->
-				<p class="copyright">
+				<!-- <p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
 					<a href="//wordpress.org">WordPress</a> &amp; <a href="//html5blank.com">HTML5 Blank</a>.
-				</p>
+				</p> -->
 				<!-- /copyright -->
 
 			</footer>
@@ -14,6 +14,7 @@
 		</div>
 		<!-- /wrapper -->
 
+		<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.flexslider-min.js"></script>
 		<?php wp_footer(); ?>
 
 		<!-- analytics -->
@@ -25,6 +26,6 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
-		<scrypt src="<?php echo get_template_directory_uri(); ?>/bower_components/angular/angular.js"></scrypt>
+		<script src="<?php echo get_template_directory_uri(); ?>/bower_components/angular/angular.js"></script>
 	</body>
 </html>
