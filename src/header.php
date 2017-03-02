@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/flexslider.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap/dist/css/bootstrap.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>css/sass/style.css">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,24 +40,27 @@
 
 			<!-- social links -->
 			<div class="social">
-				<ul>
-					<li>
-						<a href="#">
-							<span class="fa fa-facebook"></span>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<span class="fa fa-instagram"></span>
-						</a>
-					</li>
-                    <li>
-                        <a href="#">
-							<span class="fa fa-pinterest"></span>
-                        </a>
-                    </li>
-				</ul>
-			</div><!-- . / endsocial links -->
+				<div class="container">
+					<ul>
+						<li>
+							<a href="#">
+								<span class="fa fa-facebook"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="fa fa-instagram"></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="fa fa-pinterest"></span>
+							</a>
+						</li>
+					</ul>
+				</div><!-- . / endsocial links -->
+			</div>
+
 
 			<!-- header -->
 			<header class="header clear" role="banner">

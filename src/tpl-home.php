@@ -7,6 +7,7 @@ get_header();
 ?>
 <div id="home" class="">
 
+<<<<<<< HEAD
     <!-- start first section -->
     <section class="first-section pY40">
         <div class="container">
@@ -16,6 +17,11 @@ get_header();
                 <div class="col-sm-7 column">
                     <div class="flexslider">
                         <ul class="slides">
+=======
+<div class="container">
+    <div class="row">
+        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+>>>>>>> 50d34f6cc7e915135a07e0e92e9f248e60ae7e60
 
                             <?php
                                 //== get meta data for category
@@ -428,6 +434,7 @@ get_header();
     global $post;
     $args = array( 'posts_per_page' => 150 );
 
+<<<<<<< HEAD
     $myposts = get_posts( $args );
     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
         <li>
@@ -438,3 +445,23 @@ get_header();
     <?php endforeach;
     wp_reset_postdata();*/?>
    
+=======
+        <?php endif; ?>
+    </div>
+
+
+</div>
+<div class="container">
+    <?php get_sidebar(); ?>
+</div>
+
+
+
+
+
+<?php
+// Get Foot
+get_footer();
+get_template_part('content-footer');
+?>
+>>>>>>> 50d34f6cc7e915135a07e0e92e9f248e60ae7e60
