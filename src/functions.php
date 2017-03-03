@@ -16,7 +16,64 @@ require_once "modules/is-debug.php";
 /*------------------------------------*\
     Theme Support
 \*------------------------------------*/
+function wpb_set_post_views($postID) {
+    $count_key = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+//To keep the count accurate, lets get rid of prefetching
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+function wpb_track_post_views ($post_id) {
+    if ( !is_single() ) return;
+    if ( empty ( $post_id) ) {
+        global $post;
+        $post_id = $post->ID;    
+    }
+    wpb_set_post_views($post_id);
+}
+add_action( 'wp_head', 'wpb_track_post_views');
 
+
+
+
+//== get post views (http://wpsnipp.com/index.php/cache/track-post-views-without-a-plugin-using-post-meta/)
+function getPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 Pregleda";
+    }
+    if ($count == '1') {
+        return $count.' Pregled';
+    } else {
+        return $count.' Pregleda';
+    }
+}
+//== set post views
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count == '') {
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+
+// Remove issues with prefetching adding extra views
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 if (!isset($content_width))
 {
     $content_width = 900;
@@ -71,7 +128,7 @@ function html5blank_nav()
     wp_nav_menu(
     array(
         'theme_location'  => 'header-menu',
-        'menu'            => '',
+        'menu'            => 'tbg_menu',
         'container'       => 'div',
         'container_class' => 'menu-{menu slug}-container',
         'container_id'    => '',

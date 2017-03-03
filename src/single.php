@@ -3,9 +3,17 @@
 	<main role="main" aria-label="Content">
 	<!-- section -->
 	<section>
-
+		<div class="col-sm-3">
+			<?php get_sidebar(); ?>
+		</div>
+		<div class="col-sm-9">
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		<?php
+		    //== setting post views wit post ID
+		    setPostViews(get_the_ID());
+		    wpb_set_post_views(get_the_ID());
 
+		?>
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -61,11 +69,10 @@
 		<!-- /article -->
 
 	<?php endif; ?>
-
+		</div>
 	</section>
 	<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

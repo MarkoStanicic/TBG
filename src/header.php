@@ -9,6 +9,7 @@
 		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/bower_components/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/flexslider.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap/dist/css/bootstrap.css">
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900italic,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>css/sass/style.css">
@@ -16,6 +17,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+
+		<script type="text/javascript">
+			var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+		</script>
 
 		<?php wp_head(); ?>
 		<script>
@@ -59,7 +64,8 @@
 
 			<!-- header -->
 			<header class="header clear" role="banner">
-				<img src="http://welovebudapest.com/Image/header2.png" alt="">
+				<div class="img-wrapper">
+				</div>
 					<!-- logo -->
 <!--					<div class="logo">-->
 <!--						<a href="--><?php //echo home_url(); ?><!--">-->
