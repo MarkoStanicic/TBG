@@ -194,11 +194,11 @@ get_header();
                     </div>
                     <?php
                         //== set category id
-                        $cat_id = 23;
+                        // $cat_id = 23;
                         //== arguments
                         $args = array(
-                            'posts_per_page' => 5,
-                            'cat' => $cat_id
+                            'posts_per_page' => 5
+                            // 'cat' => $cat_id
                         );
                         query_posts($args);
                         while (have_posts()) : the_post();
