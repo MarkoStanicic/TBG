@@ -95,19 +95,19 @@ get_header();
                 <?php
                     //== get meta data for category
                     $bottomFourKey = "Bottom Four";
-                    $cat_id = get_post_meta($post->ID, $bottomFourKey, true);
+                    $cat_id3 = get_post_meta($post->ID, $bottomFourKey, true);
                     //== arguments
-                    $args = array(
+                    $args3 = array(
                         'posts_per_page' => 6,
-                        'cat' => $cat_id
+                        'cat' => $cat_id3
                     );
-                    query_posts($args);
+                    query_posts($args3);
                     while (have_posts()) : the_post();
                 ?>
                 <a href="<?php the_permalink() ?>" class="thumbHolder col-md-3 col-sm-3 col-xs-12 column">
                     <span class="thumbShadow">
                         <span class="thumbCategory">
-                            <?php echo get_cat_name( $cat_id ) ?>
+                            <?php echo get_cat_name( $cat_id3 ) ?>
                         </span>
                         <span class="thumbTitle">
                         <?php
