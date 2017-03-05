@@ -99,8 +99,7 @@ get_header();
                     //== arguments
                     $args = array(
                         'posts_per_page' => 4,
-                        'cat' => $cat_id,
-                        'offset'=> 2
+                        'cat' => $cat_id
                     );
                     query_posts($args);
                     while (have_posts()) : the_post();
