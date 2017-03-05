@@ -98,7 +98,7 @@ get_header();
                     $cat_id = get_post_meta($post->ID, $bottomFourKey, true);
                     //== arguments
                     $args = array(
-                        'posts_per_page' => 4,
+                        'posts_per_page' => 6,
                         'cat' => $cat_id
                     );
                     query_posts($args);
@@ -135,7 +135,7 @@ get_header();
             <div class="row">
                 <?php
                     //== set category id
-                    $cat_id = 4;
+                    $cat_id = 23;
                     //== arguments
                     $args = array(
                         'posts_per_page' => 3,
