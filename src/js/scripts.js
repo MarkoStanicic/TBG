@@ -26,6 +26,7 @@
         			'overflow': 'auto',
 				    'height': 'calc(100% + 40px)',
 				    'width': 'calc(' + stickyWidth + 'px + 30px)',
+				    'margin-left': '-15px',
 				    'padding': '0 15px'
         		});
         	} else {
