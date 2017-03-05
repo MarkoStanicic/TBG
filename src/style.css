@@ -192,9 +192,6 @@ input[type="search"] {
  * ---
  * Utils classes
  */
-body {
-  padding-bottom: 100px; }
-
 a, a:hover, a:focus {
   outline: none;
   text-decoration: none; }
@@ -205,6 +202,9 @@ a, a:hover, a:focus {
 
 .clearfix:after {
   clear: both; }
+
+.autoWidth {
+  width: auto; }
 
 .reset-box {
   padding: 0;

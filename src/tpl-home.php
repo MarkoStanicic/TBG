@@ -257,7 +257,7 @@ get_header();
                         wp_reset_query();
                     ?>
                 </div>
-                <div class="col-sm-5 column sidebar sticky">
+                <div class="col-sm-5 column sidebar">
                     <div class="sidebarWidget">
                         <div class="sectionTitle">
                             <ul>
@@ -365,7 +365,7 @@ get_header();
                             <?php //the_widget( 'WP_Widget_Recent_Comments', $instance, $args ); ?>
                         </div>
                     </div>
-                    <div class="sidebarWidget">
+                    <div class="sidebarWidget sticky">
                         <div class="sectionTitle">
                             <ul>
                                 <li>

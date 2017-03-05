@@ -25,7 +25,8 @@
         			'left': stickyOffsetLeft,
         			'overflow': 'auto',
 				    'height': 'calc(100% + 40px)',
-				    'width': stickyWidth
+				    'width': 'calc(' + stickyWidth + 'px + 30px)',
+				    'padding': '0 15px'
         		});
         	} else {
         		getSticky.css({
