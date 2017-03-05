@@ -59,9 +59,8 @@ get_header();
                 </div>
                 <div class="col-md-5 col-sm-5 col-xs-12 column">
                     <?php
-                        //== set category id
                         //== get meta data for category
-                        $nextToSliderkey = "Slider First Section";
+                        $nextToSliderkey = "Next To Slider";
                         $cat_id = get_post_meta($post->ID, $nextToSliderkey, true);
                         //== arguments
                         $args = array(
@@ -70,7 +69,7 @@ get_header();
                         );
                         query_posts($args);
                         while (have_posts()) : the_post();
-                    ?>aaa
+                    ?>
                     <a href="<?php the_permalink() ?>" class="thumbHolder">
                         <span class="thumbShadow">
                             <span class="thumbCategory">
@@ -94,8 +93,9 @@ get_header();
             <div class="row bottom">
 
                 <?php
-                    //== set category id
-                    $cat_id = 22;
+                    //== get meta data for category
+                    $bottomFourKey = "Bottom Four";
+                    $cat_id = get_post_meta($post->ID, $bottomFourKey, true);
                     //== arguments
                     $args = array(
                         'posts_per_page' => 4,
