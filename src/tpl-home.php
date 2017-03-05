@@ -65,12 +65,11 @@ get_header();
                         $cat_id = get_post_meta($post->ID, $nextToSliderkey, true);
                         //== arguments
                         $args = array(
-                            'posts_per_page' => 2,
+                            'posts_per_page' => 1,
                             'cat' => $cat_id
                         );
                         query_posts($args);
                         while (have_posts()) : the_post();
-                            if (!0 == $wp_query->current_post) {
                     ?>
                     <a href="<?php the_permalink() ?>" class="thumbHolder">
                         <span class="thumbShadow">
@@ -86,7 +85,6 @@ get_header();
                         <img src="<?php the_post_thumbnail_url(); ?>" class="thumb">
                     </a>
                     <?php
-                            }
                         endwhile;
                         wp_reset_query();
                     ?>
