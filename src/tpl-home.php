@@ -13,7 +13,7 @@ get_header();
             <!-- start first row -->
             <div class="row top">
 
-                <div class="col-sm-7 column">
+                <div class="col-md-7 col-sm-7 col-xs-12 column">
                     <div class="flexslider">
                         <ul class="slides">
                             <?php
@@ -57,7 +57,7 @@ get_header();
                         </ul>
                     </div>                    
                 </div>
-                <div class="col-sm-5 column">
+                <div class="col-md-5 col-sm-5 col-xs-12 column">
                     <?php
                         //== set category id
                         $cat_id = 23;
@@ -105,7 +105,7 @@ get_header();
                     query_posts($args);
                     while (have_posts()) : the_post();
                 ?>
-                <a href="<?php the_permalink() ?>" class="thumbHolder col-sm-3 column">
+                <a href="<?php the_permalink() ?>" class="thumbHolder col-md-3 col-sm-3 col-xs-12 column">
                     <span class="thumbShadow">
                         <span class="thumbCategory">
                             <?php echo get_cat_name( $cat_id ) ?>

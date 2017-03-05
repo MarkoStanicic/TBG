@@ -22,7 +22,10 @@ a, a:hover, a:focus {
     clear: both;
   }
 }
-
+//== Width
+.autoWidth {
+	width: auto;
+}
 .reset-box {
   @include reset-box;
 }
