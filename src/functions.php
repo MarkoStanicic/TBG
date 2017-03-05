@@ -40,9 +40,6 @@ function wpb_track_post_views ($post_id) {
 }
 add_action( 'wp_head', 'wpb_track_post_views');
 
-
-
-
 //== get post views (http://wpsnipp.com/index.php/cache/track-post-views-without-a-plugin-using-post-meta/)
 function getPostViews($postID) {
     $count_key = 'post_views_count';

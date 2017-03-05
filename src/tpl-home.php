@@ -60,7 +60,9 @@ get_header();
                 <div class="col-md-5 col-sm-5 col-xs-12 column">
                     <?php
                         //== set category id
-                        $cat_id = 23;
+                        //== get meta data for category
+                        $nextToSliderkey = "Slider First Section";
+                        $cat_id = get_post_meta($post->ID, $nextToSliderkey, true);
                         //== arguments
                         $args = array(
                             'posts_per_page' => 2,
