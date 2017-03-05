@@ -98,8 +98,8 @@ get_header();
                     $cat_id3 = get_post_meta($post->ID, $bottomFourKey, true);
                     //== arguments
                     $args3 = array(
-                        'posts_per_page' => 6,
-                        'cat' => $cat_id3
+                        'posts_per_page' => 4
+                        // 'cat' => $cat_id3
                     );
                     query_posts($args3);
                     while (have_posts()) : the_post();
