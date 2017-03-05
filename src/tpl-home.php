@@ -70,7 +70,7 @@ get_header();
                         );
                         query_posts($args);
                         while (have_posts()) : the_post();
-                    ?>
+                    ?>aaa
                     <a href="<?php the_permalink() ?>" class="thumbHolder">
                         <span class="thumbShadow">
                             <span class="thumbCategory">
