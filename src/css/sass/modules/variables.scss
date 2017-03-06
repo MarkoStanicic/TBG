@@ -1,21 +1,49 @@
-/**
- * modules/variables
- * ---
- */
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors for use across TheBelgradeGuide website
+//
+
+//## White Color
+
+$white-color: 					#ffffff;
+
+//## Grey Colors
+
+$grey: 							#BBBBBB !default;
+
+$grey-light: 					#E2E2E2 !default;
+$grey-lighter: 					#F1F1F1 !default;
+$grey-lightest: 				#F9F9F9 !default;
+
+$grey-dark: 					#888888 !default;
+$grey-darker: 					#666666 !default;
+$grey-darkest: 					#333333 !default;
+
+//## Blue Colors
+
+$blue: 							#48B0ED !default;
+
+$blue-light:					#73C3F1 !default;
+$blue-lighter:					#91D0F4 !default;
+$blue-lightest:					#B0DDF7 !default;
+
+$blue-dark:						#43A3DC !default;
+$blue-darker:					#398ABA !default;
+$blue-darkest:					#296587 !default;
+
+//== Typography for use across TheBelgradeGuide website
+//
+$font-family: 					'Roboto', sans-serif;				
+
+$base-font-size:				13px;
+$base-font-weight:				400;
+$base-line-height: 				1.5;
 
 
-/**
- * Typography
- */
-
-$font-family-base: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
-$font-size-base: 140%;
-$line-height-base: 1.5;
-
-
-/**
- * Colors
- */
+//== Colors
+//
 
 $text-color: #444;
 $body-bg: #fff;
@@ -46,12 +74,10 @@ $blue-dark: #2B8EAD !default;
 $blue-darker: #238096 !default;
 
 
-/**
- * Grid
- */
+//== Grid
+//
 
 $wrapper-width: 1280px;
-
 
 $padding-horizontal-base: 5px;
 $padding-vertical-base: 5px;

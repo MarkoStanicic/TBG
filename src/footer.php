@@ -31,5 +31,6 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
-		<script src="<?php echo get_template_directory_uri(); ?>/bower_components/angular/angular.js"></script>
+
+		<?php/*<script src="<?php echo get_template_directory_uri(); ?>/bower_components/angular/angular.js"></script>*/?>
 </body>
