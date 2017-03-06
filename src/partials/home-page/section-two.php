@@ -9,7 +9,7 @@
         <div class="row">
             <?php
                 //== set category id
-                $cat_id = 4;
+                $cat_id = 23;
                 //== arguments
                 $args = array(
                     'posts_per_page' => 3,

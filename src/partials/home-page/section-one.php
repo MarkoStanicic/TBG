@@ -46,7 +46,7 @@
             <div class="col-md-5 col-sm-5 col-xs-12 column">
                 <?php
                     //== set category id
-                    $cat_id_for_second = 2;
+                    $cat_id_for_second = 23;
                     //== arguments
                     $args = array(
                         'posts_per_page' => 1,
@@ -78,7 +78,7 @@
         <div class="row bottom">
             <?php
                 //== set category id
-                $cat_id_for_bottom = 22;
+                $cat_id_for_bottom = 23;
                 //== arguments
                 $args = array(
                     'posts_per_page' => 4,
