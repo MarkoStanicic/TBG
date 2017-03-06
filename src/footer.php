@@ -8,6 +8,10 @@
 		<a href="//wordpress.org">WordPress</a> &amp; <a href="//html5blank.com">HTML5 Blank</a>.
 	</p>-->
 	<!-- /copyright -->
+	<?php
+	// Get Foot content
+	get_template_part('content-footer');
+	?>
 
 </footer>
 <!-- /footer -->

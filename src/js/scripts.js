@@ -13,27 +13,27 @@
 		});
 
 		//== Sticky Sidebar
-		var getSticky = $('.sticky'),
-			stickyOffsetTop = getSticky.offset().top,
-			stickyOffsetLeft = getSticky.offset().left,
-			stickyWidth = getSticky.width();
-		$(window).scroll(function() {
-    		if($(window).scrollTop() > stickyOffsetTop){
-        		getSticky.css({
-        			'position': 'fixed',
-        			'top': '-40px',
-        			'left': stickyOffsetLeft,
-        			'overflow': 'auto',
-				    'height': 'calc(100% + 40px)',
-				    'width': stickyWidth
-        		});
-        	} else {
-        		getSticky.css({
-        			'position':'static',
-        			'height': 'auto'
-        		});
-    		}
-		});
+		// var getSticky = $('.sticky'),
+		// 	stickyOffsetTop = getSticky.offset().top,
+		// 	stickyOffsetLeft = getSticky.offset().left,
+		// 	stickyWidth = getSticky.width();
+		// $(window).scroll(function() {
+    		// if($(window).scrollTop() > stickyOffsetTop){
+        	// 	getSticky.css({
+        	// 		'position': 'fixed',
+        	// 		'top': '-40px',
+        	// 		'left': stickyOffsetLeft,
+        	// 		'overflow': 'auto',
+		// 		    'height': 'calc(100% + 40px)',
+		// 		    'width': stickyWidth
+        	// 	});
+        	// } else {
+        	// 	getSticky.css({
+        	// 		'position':'static',
+        	// 		'height': 'auto'
+        	// 	});
+    		// }
+		// });
 
 		//== Header Image Functionality
 		var url,
@@ -57,15 +57,14 @@
 		});
 
 		//== Sidebar Toggle Sections
-		$('.sidebar .sectionTitle a').click(function() {
+		$('.sidebar .sectionTitle a, .footerWidget .sectionTitle a').click(function() {
 	      	var id =  $(this).attr('id');
 	      	id = id.split('_');
-	      	$('.sidebar .sectionTitle a').removeClass('active');
+	      	$('.sidebar .sectionTitle a, .footerWidget .sectionTitle a').removeClass('active');
 	      	$(this).addClass('active');
-	      	$('.sidebar .toggle').addClass('hide'); 
-	      	$('.sidebar .toggle#' + id[1]).removeClass('hide');
+	      	$('.sidebar .toggle, .footerWidget .toggle').addClass('hide');
+	      	$('.sidebar .toggle#, .footerWidget .toggle#' + id[1]).removeClass('hide');
 	   	});
-
 
 	});
 

@@ -60,7 +60,7 @@ get_header();
                 <div class="col-sm-5 column">
                     <?php
                         //== set category id
-                        $cat_id = 23;
+                        $cat_id = 14;
                         //== arguments
                         $args = array(
                             'posts_per_page' => 2,
@@ -95,7 +95,7 @@ get_header();
 
                 <?php
                     //== set category id
-                    $cat_id = 22;
+                    $cat_id = 39;
                     //== arguments
                     $args = array(
                         'posts_per_page' => 4,
@@ -136,7 +136,7 @@ get_header();
             <div class="row">
                 <?php
                     //== set category id
-                    $cat_id = 4;
+                    $cat_id = 28;
                     //== arguments
                     $args = array(
                         'posts_per_page' => 3,
@@ -195,7 +195,7 @@ get_header();
                     </div>
                     <?php
                         //== set category id
-                        $cat_id = 23;
+                        $cat_id = 28;
                         //== arguments
                         $args = array(
                             'posts_per_page' => 5,
@@ -312,9 +312,6 @@ get_header();
                                     </span>
                                 </div>
                             </div>
-
-                            
-
                             <?php
                                 endwhile;
                                 wp_reset_query();
@@ -425,5 +422,4 @@ get_header();
 <?php
     // Get Foot
     get_footer();
-    get_template_part('content-footer');
 ?>
