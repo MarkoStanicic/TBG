@@ -16,6 +16,7 @@
  * ---
  * Main `sass` file. Import here `sass` files
  */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -60,19 +61,6 @@ table {
   border-spacing: 0; }
 
 /**
- * modules/variables
- * ---
- */
-/**
- * Typography
- */
-/**
- * Colors
- */
-/**
- * Grid
- */
-/**
  * modules/mixins
  * ---
  */
@@ -107,13 +95,6 @@ table {
 html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: transparent; }
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
-  font-size: 140%;
-  line-height: 1.5;
-  color: #444;
-  background-color: #fff; }
 
 img {
   max-width: 100%;
@@ -184,16 +165,21 @@ input[type="search"] {
 .gallery-caption {
   margin: 0;
   padding: 0 5px 5px;
-  font-size: 140%;
+  font-size: 13px;
   line-height: 1.5; }
 
-/**
- * partials/utils
- * ---
- * Utils classes
- */
+html,
 body {
-  padding-bottom: 100px; }
+  color: #666666;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizelegibility; }
 
 a, a:hover, a:focus {
   outline: none;
@@ -205,6 +191,9 @@ a, a:hover, a:focus {
 
 .clearfix:after {
   clear: both; }
+
+.autoWidth {
+  width: auto; }
 
 .reset-box {
   padding: 0;

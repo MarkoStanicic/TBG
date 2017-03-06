@@ -2,7 +2,6 @@
 <section class="first-section pY40">
     <div class="container">
         <div class="row top">
-
             <div class="col-md-7 col-sm-7 col-xs-12 column">
                 <div class="flexslider">
                     <ul class="slides">

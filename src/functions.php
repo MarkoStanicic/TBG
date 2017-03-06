@@ -40,9 +40,6 @@ function wpb_track_post_views ($post_id) {
 }
 add_action( 'wp_head', 'wpb_track_post_views');
 
-
-
-
 //== get post views (http://wpsnipp.com/index.php/cache/track-post-views-without-a-plugin-using-post-meta/)
 function getPostViews($postID) {
     $count_key = 'post_views_count';
@@ -70,6 +67,24 @@ function setPostViews($postID) {
         $count++;
         update_post_meta($postID, $count_key, $count);
     }
+}
+//== Recent Comments
+function tbg_recent_comments($no_comments = 5, $comment_len = 80, $avatar_size = 68) {
+    $comments_query = new WP_Comment_Query();
+    $comments = $comments_query->query( array( 'number' => $no_comments ) );
+    $comm = '';
+    if ( $comments ) : foreach ( $comments as $comment ) :
+        $comm .= '<li>';
+        $comm .= '<a class="author" href="' . get_permalink( $comment->comment_post_ID ) . '#comment-' . $comment->comment_ID . '">';
+        $comm .= get_avatar( $comment->comment_author_email, $avatar_size );
+        $comm .= get_comment_author( $comment->comment_ID ) . '<br/>';
+        $comm .=  strip_tags( substr( apply_filters( 'get_comment_text', $comment->comment_content ), 0, $comment_len ) ) . '...';
+        $comm .= '</a>';
+        $comm .= '</li>';
+    endforeach; else :
+        $comm .= 'nema Komentara!';
+    endif;
+    echo $comm; 
 }
 
 // Remove issues with prefetching adding extra views

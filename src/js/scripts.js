@@ -13,27 +13,31 @@
 		});
 
 		//== Sticky Sidebar
-		var getSticky = $('.sticky'),
-			stickyOffsetTop = getSticky.offset().top,
-			stickyOffsetLeft = getSticky.offset().left,
-			stickyWidth = getSticky.width();
-		$(window).scroll(function() {
-    		if($(window).scrollTop() > stickyOffsetTop){
-        		getSticky.css({
-        			'position': 'fixed',
-        			'top': '-40px',
-        			'left': stickyOffsetLeft,
-        			'overflow': 'auto',
-				    'height': 'calc(100% + 40px)',
-				    'width': stickyWidth
-        		});
-        	} else {
-        		getSticky.css({
-        			'position':'static',
-        			'height': 'auto'
-        		});
-    		}
-		});
+		var getSticky = $('.sticky');
+		if (getSticky.length) {
+			var stickyOffsetTop = getSticky.offset().top,
+				stickyOffsetLeft = getSticky.offset().left,
+				stickyWidth = getSticky.width();
+			$(window).scroll(function() {
+	    		if($(window).scrollTop() > stickyOffsetTop){
+	        		getSticky.css({
+	        			'position': 'fixed',
+	        			'top': '-40px',
+	        			'left': stickyOffsetLeft,
+	        			'overflow': 'auto',
+					    'height': 'calc(100% + 40px)',
+					    'width': 'calc(' + stickyWidth + 'px + 30px)',
+					    'margin-left': '-15px',
+					    'padding': '0 15px'
+	        		});
+	        	} else {
+	        		getSticky.css({
+	        			'position':'static',
+	        			'height': 'auto'
+	        		});
+	    		}
+			});
+		}	
 
 		//== Header Image Functionality
 		var url,
@@ -41,7 +45,6 @@
 		    imgWrapper = $('.img-wrapper');
 
 		if (hour > 6 && hour < 18) {
-			console.log(templateUrl);
 			imgWrapper.css({
 				'background-image': 'url(http://localhost/tbg/wp-content/themes/TBG/src/img/header/belgrade-1.jpg)'
 			});

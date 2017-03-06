@@ -14,6 +14,8 @@ get_header();
         get_template_part('partials/home-page/section', 'two');
         //== start third section (three)
         get_template_part('partials/home-page/section', 'three');
+        //== start fourth section (four)
+        get_template_part('partials/home-page/section', 'four');
     ?>
     
 </div>

@@ -127,20 +127,16 @@
                                 </span>
                             </div>
                         </div>
-
-                        
-
                         <?php
                             endwhile;
                             wp_reset_query();
                         ?>
                     </div>
                     <div id="popular" class="toggle hide">
-                        
                         <?php 
                             $popularpost = new WP_Query( 
                                 array( 
-                                    'posts_per_page' => 10,
+                                    'posts_per_page' => 3,
                                     'meta_key' => 'wpb_post_views_count',
                                     'orderby' => 'meta_value_num',
                                     'order' => 'DESC'  
@@ -175,13 +171,21 @@
                         <?php
                             endwhile;
                         ?>
-
                     </div>
                     <div id="comments" class="toggle hide">
-                        <?php //the_widget( 'WP_Widget_Recent_Comments', $instance, $args ); ?>
+    						<?php tbg_recent_comments(); ?>
                     </div>
+                    <style type="text/css">
+						#comments { list-style: none; font-size: 12px; color: #485358; }
+						#comments li { overflow: hidden; border-top: 1px dotted #DADEE1; }
+						#comments li:first-child { border: 0 none; }
+						#comments li:first-child a { padding-top: 0; }
+						#comments img { float: left; margin-right: 8px; } 
+						#comments a { display: block; margin-bottom: 10px; padding-top: 10px; text-transform: uppercase; overflow: hidden; } 
+                    </style>
                 </div>
-                <div class="sidebarWidget  sticky">
+                <!-- <div class="sidebarWidget sticky"> -->
+                <div class="sidebarWidget">
                     <div class="sectionTitle">
                         <ul>
                             <li>
@@ -230,4 +234,4 @@
             </div>
         </div>
     </div>
-</section><!-- . / end third section -->
+</section><!-- . / end third section
