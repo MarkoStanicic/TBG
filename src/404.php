@@ -6,11 +6,28 @@
 
 			<!-- article -->
 			<article id="post-404">
-
-				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
+				<div class="container">
+					<h1 class="pY40">
+						UPSS
+					</h1>
+					<h2>
+						Trenutno nemamo stranu koju ste tražili
+					</h2>
+					<p>
+						Možda pretragom stignete do željene strane
+					</p>
+					<ul class="search">
+						<input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="<?php _e( 'Pretraga', 'html5blank' ); ?>">
+						<a href="javascript:void(0)">
+							<span class="fa fa-search"></span>
+						</a>
+						<!--								<button class="search-submit" type="submit">--><?php //_e( 'Search', 'html5blank' ); ?><!--</button>-->
+					</ul>
+					<h3 class="pY40">
+						<i class="fa fa-home" aria-hidden="true"></i>
+						<a href="<?php echo home_url(); ?>">Vratite se na našu početnu stranu!!!</a>
+					</h3>
+				</div>
 
 			</article>
 			<!-- /article -->
@@ -18,7 +35,5 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

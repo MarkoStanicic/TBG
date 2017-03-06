@@ -69,6 +69,10 @@
 	      	$('.sidebar .toggle#, .footerWidget .toggle#' + id[1]).removeClass('hide');
 	   	});
 
+		$("[data-fancybox]").fancybox({
+			// Options will go here
+		});
+
 	});
 
 } ( this, jQuery ));

@@ -20,6 +20,8 @@
 <!-- /wrapper -->
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.flexslider-min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.fancybox.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
 	<?php wp_footer(); ?>
 
 	<!-- analytics -->
@@ -32,5 +34,7 @@
 		ga('send', 'pageview');
 		</script>
 
-		<?php/*<script src="<?php echo get_template_directory_uri(); ?>/bower_components/angular/angular.js"></script>*/?>
+
+
+<?php/*<script src="<?php echo get_template_directory_uri(); ?>/bower_components/angular/angular.js"></script>*/?>
 </body>

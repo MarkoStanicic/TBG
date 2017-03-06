@@ -284,7 +284,7 @@ p {
   display: inline-block;
   padding-bottom: 8px;
   padding-right: 2px;
-  border-bottom: 2px solid #54B2D3; }
+  border-bottom: 2px solid #73C3F1; }
 
 .cnt-title:after {
   position: absolute;
@@ -733,7 +733,7 @@ p {
   background: #26272b;
   color: #fff; }
   .footer h2 {
-    color: #54B2D3;
+    color: #73C3F1;
     font-size: 30px;
     margin-bottom: 15px; }
 
@@ -770,7 +770,7 @@ p {
           position: relative;
           word-spacing: 2px;
           color: #f5f5f5;
-          border-bottom: 2px solid #54B2D3;
+          border-bottom: 2px solid #73C3F1;
           padding-bottom: 9px; }
 
 .footerWidget .flex {
@@ -794,7 +794,7 @@ p {
     text-transform: uppercase;
     font-size: 11px; }
     .footerWidget .flex .cnt .getAuthor a {
-      color: #54B2D3; }
+      color: #73C3F1; }
   .footerWidget .flex .cnt .postTime {
     display: inline;
     text-transform: uppercase;
@@ -823,6 +823,48 @@ p {
     background: #3d739f; }
   .social-footer ul li .fa-pinterest {
     background: #cb1a22; }
+
+/**
+ * 404 Page CSS
+ * ---
+ */
+#post-404 {
+  text-align: center; }
+  #post-404 h1 {
+    color: #73C3F1;
+    font-size: 86px; }
+  #post-404 h2 {
+    color: #444;
+    font-size: 48px; }
+  #post-404 p {
+    font-size: 28px; }
+  #post-404 ul {
+    display: inline-block; }
+    #post-404 ul input {
+      display: block;
+      width: 300px;
+      height: 50px;
+      float: left;
+      font-size: 22px;
+      padding-left: 10px; }
+    #post-404 ul a {
+      display: block;
+      float: left; }
+      #post-404 ul a span {
+        color: #ffffff;
+        background: #73C3F1;
+        font-size: 28px;
+        width: 55px;
+        height: 55px;
+        line-height: 55px; }
+  #post-404 h3 {
+    color: #73C3F1; }
+    #post-404 h3 i {
+      font-size: 30px;
+      vertical-align: middle;
+      color: #73C3F1; }
+    #post-404 h3 a {
+      color: #73C3F1; }
 
 /**
  * partials/print

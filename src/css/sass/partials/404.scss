@@ -1,0 +1,53 @@
+/**
+ * 404 Page CSS
+ * ---
+ */
+
+#post-404 {
+    text-align: center;
+    h1 {
+        color: $blue-light;
+        font-size: 86px;
+    }
+    h2 {
+        color: $text-color;
+        font-size: 48px;
+    }
+    p {
+        font-size: 28px;
+    }
+    ul {
+        display: inline-block;
+        input {
+            display: block;
+            width: 300px;
+            height: 50px;
+            float: left;
+            font-size: 22px;
+            padding-left: 10px;
+        }
+        a {
+            display: block;
+            float: left;
+            span {
+                color: $white-color;
+                background: $blue-light;
+                font-size: 28px;
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+            }
+        }
+    }
+    h3 {
+        color: $blue-light;
+        i {
+            font-size: 30px;
+            vertical-align: middle;
+            color: $blue-light;
+        }
+        a {
+            color: $blue-light;
+        }
+    }
+}

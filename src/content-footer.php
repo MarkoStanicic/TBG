@@ -15,7 +15,7 @@
 <footer class="footer pY40">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4 col-xs-12">
                 <h2>
                     The Belgrade Guide
                 </h2>
@@ -47,7 +47,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-xs-12">
                 <div class="footerWidget">
                     <div class="sectionTitle">
                         <ul>
@@ -166,7 +166,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-xs-12">
                 <div class="gallery-foot">
                     <div class="cnt-header">
                         <div class="cnt-title">
@@ -189,7 +189,7 @@
                             ?>
                             <li class="recentPhotos">
                                 <div class="tumb">
-                                    <a href="<?php the_permalink() ?>">
+                                    <a data-fancybox="images" data-caption="My caption" href="<?php the_permalink() ?>">
                                         <?php the_post_thumbnail(); ?>
                                     </a>
                                 </div>
