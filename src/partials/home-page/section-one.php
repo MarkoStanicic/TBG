@@ -1,13 +1,18 @@
 <!-- start first section -->
 <section class="first-section pY40">
     <div class="container">
+        <?php 
+echo the_field('slider_first_section');
+echo '<br/>';
+ the_field('slider_first_section');
+        ?>
         <div class="row top">
             <div class="col-md-7 col-sm-7 col-xs-12 column">
                 <div class="flexslider">
                     <ul class="slides">
                         <?php
                             //== get acf data for category
-                            $key = the_field('slider_first_section');
+                            $key = echo the_field('slider_first_section');
                             $slideKey = "Number of Slides in First Section";
                             //== set category id
                             $cat_id = get_post_meta($post->ID, $key, true);
