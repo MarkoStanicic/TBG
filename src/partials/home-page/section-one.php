@@ -6,8 +6,8 @@
                 <div class="flexslider">
                     <ul class="slides">
                         <?php
-                            //== get meta data for category
-                            $key = "Slider First Section";
+                            //== get acf data for category
+                            $key = the_field('slider_first_section');
                             $slideKey = "Number of Slides in First Section";
                             //== set category id
                             $cat_id = get_post_meta($post->ID, $key, true);

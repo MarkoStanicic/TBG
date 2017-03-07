@@ -1,7 +1,7 @@
 <!-- start third section -->
 <section class="third-section">
     <div class="container">
-        <div class="row">
+        <div class="clearfix">
             <div class="col-sm-7 column">
                 <div class="sectionTitle">
                     <span class="title">
@@ -10,13 +10,13 @@
                 </div>
                 <?php
                     //== set category id
-                    $cat_id = 23;
+                    $cat_id_section_three = 19;
                     //== arguments
-                    $args = array(
+                    $argsThree = array(
                         'posts_per_page' => 5,
-                        'cat' => $cat_id
+                        'cat' => $cat_id_section_three
                     );
-                    query_posts($args);
+                    query_posts($argsThree);
                     while (have_posts()) : the_post();
                 ?>
                 <div class="thumbHolder">
@@ -25,7 +25,7 @@
                             <img src="<?php the_post_thumbnail_url(); ?>" class="thumb">
                         </a>
                         <span class="thumbCategory">
-                            <?php echo get_cat_name( $cat_id ) ?>
+                            <?php echo get_cat_name( $cat_id_section_three ) ?>
                         </span>
                     </div>
                     <div class="cnt">
