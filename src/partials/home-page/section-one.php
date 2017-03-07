@@ -1,23 +1,22 @@
 <!-- start first section -->
 <section class="first-section pY40">
     <div class="container">
-        <?php  the_field('slider_first_section');?>
         <div class="row top">
             <div class="col-md-7 col-sm-7 col-xs-12 column">
                 <div class="flexslider">
                     <ul class="slides">
                         <?php
-                            //== get acf data for category
-                            $key = the_field('slider_first_section');
-                            $slideKey = "Number of Slides in First Section";
+                            //== get meta data for category
+                            // $key = the_field('slider_first_section');
+                            // $slideKey = "Number of Slides in First Section";
                             //== set category id
-                            $cat_id = get_post_meta($post->ID, $key, true);
+                            $cat_id_slider = the_field('slider_first_section');
                             //== set slide number
-                            $slide_num = get_post_meta($post->ID, $slideKey, true);
+                            $slide_num = the_field('number_of_slides_in_first_section');
                             //== arguments
                             $args = array(
                                 'posts_per_page' => $slide_num,
-                                'cat' => $cat_id
+                                'cat' => $cat_id_slider
                             );
                             query_posts($args);
                             while (have_posts()) : the_post();
@@ -26,7 +25,7 @@
                             <a href="<?php the_permalink() ?>" class="thumbHolder">
                                 <span class="thumbShadow">
                                     <span class="thumbCategory">
-                                        <?php echo get_cat_name( $cat_id ) ?>
+                                        <?php echo get_cat_name( $cat_id_slider ) ?>
                                     </span>
                                     <span class="thumbTitle">
                                     <?php
