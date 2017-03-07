@@ -1,11 +1,6 @@
 <!-- start first section -->
 <section class="first-section pY40">
     <div class="container">
-        <?php 
-echo the_field('slider_first_section');
-echo '<br/>';
- the_field('slider_first_section');
-        ?>
         <div class="row top">
             <div class="col-md-7 col-sm-7 col-xs-12 column">
                 <div class="flexslider">
