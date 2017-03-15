@@ -4,17 +4,36 @@
  */
 
 #post-404 {
+    /*background-image: url(http://localhost/welovebelgrade/wp-content/themes/TBG/src/img/torn-paper.png);
+    background-repeat: no-repeat;*/
     text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+    .img-center {
+        position: relative;
+        top: 60px;
+    }
+    .wrap-text {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 20%;
+    }
     h1 {
-        color: $blue-light;
+        color: $white-color;
         font-size: 86px;
     }
     h2 {
-        color: $text-color;
+        color: $grey-light;
         font-size: 48px;
     }
     p {
         font-size: 28px;
+        color: $grey-lighter;
     }
     ul {
         display: inline-block;
@@ -30,8 +49,8 @@
             display: block;
             float: left;
             span {
-                color: $white-color;
-                background: $blue-light;
+                color: $blue-light;
+                background: $white-color;
                 font-size: 28px;
                 width: 55px;
                 height: 55px;
@@ -40,14 +59,14 @@
         }
     }
     h3 {
-        color: $blue-light;
+        color: $white-color;
         i {
             font-size: 30px;
             vertical-align: middle;
-            color: $blue-light;
+            color: $white-color;
         }
         a {
-            color: $blue-light;
+            color: $white-color;
         }
     }
 }

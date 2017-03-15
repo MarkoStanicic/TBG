@@ -7,12 +7,8 @@
  * @since KUD 1.0
  */
 ?>
-<style type="text/css">
 
-
-</style>
-
-<footer class="footer pY40">
+<div class="footer pY40">
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-xs-12">
@@ -228,9 +224,7 @@
                         </li>
                     </ul>
                 </div>
-
-
             </div>
         </div>
     </div>
-</footer><!-- . / end Footer -->
+</div><!-- . / end Footer -->
