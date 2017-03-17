@@ -24,6 +24,10 @@ a, a:hover, a:focus {
 	outline: none;
 	text-decoration: none;
 }
+
+p {
+	margin: 0 0 15px;
+}
 // clearfix: http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix {
   &:before,
@@ -48,6 +52,12 @@ a, a:hover, a:focus {
 	cursor: default !important;
 }
 //== Padding
+.pY20 {
+	padding: 20px 0;
+}
+.pX20 {
+	padding: 0 20px;
+}
 .pY40 {
 	padding: 40px 0;
 }
@@ -104,6 +114,43 @@ a, a:hover, a:focus {
     font-weight: 400;
     font-size: 13px;
     display: block;
+}
+
+//== Content header
+
+.cnt-header {
+	text-align: left;
+	position: relative;
+	padding-bottom: 20px;
+}
+
+.cnt-title {
+	position: relative;
+}
+
+.cnt-title h3 {
+	position: relative;
+	z-index: 1;
+	font-size: 14px;
+	word-spacing: 2px;
+	margin: 0;
+	text-transform: uppercase;
+	color: $head-text;
+	font-weight: 700!important;
+	display: inline-block;
+	padding-bottom: 8px;
+	padding-right: 2px;
+	border-bottom: 2px solid $blue-light;
+}
+
+.cnt-title:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	border-bottom: 2px solid $grey-dark;
+	z-index: 0;
 }
 
 //== First section - Home Page

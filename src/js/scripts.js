@@ -60,15 +60,18 @@
 		});
 
 		//== Sidebar Toggle Sections
-		$('.sidebar .sectionTitle a').click(function() {
+		$('.sidebar .sectionTitle a, .footerWidget .sectionTitle a').click(function() {
 	      	var id =  $(this).attr('id');
 	      	id = id.split('_');
-	      	$('.sidebar .sectionTitle a').removeClass('active');
+	      	$('.sidebar .sectionTitle a, .footerWidget .sectionTitle a').removeClass('active');
 	      	$(this).addClass('active');
-	      	$('.sidebar .toggle').addClass('hide'); 
-	      	$('.sidebar .toggle#' + id[1]).removeClass('hide');
+	      	$('.sidebar .toggle, .footerWidget .toggle').addClass('hide');
+	      	$('.sidebar .toggle#, .footerWidget .toggle#' + id[1]).removeClass('hide');
 	   	});
 
+		$("[data-fancybox]").fancybox({
+			// Options will go here
+		});
 
 	});
 

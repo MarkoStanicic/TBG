@@ -1,24 +1,36 @@
 <?php get_header(); ?>
-
-	<main role="main" aria-label="Content">
-		<!-- section -->
+	<!-- 404 section -->
 		<section>
-
-			<!-- article -->
-			<article id="post-404">
-
-				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
-
-			</article>
-			<!-- /article -->
+			<div id="post-404">
+				<div class="img-center">
+					<img src="<?php echo get_template_directory_uri();?>/img/torn-page.jpg" alt="">
+				</div>
+				<div class="container">
+					<div class="wrap-text">
+						<h1>
+							UPS
+						</h1>
+						<h2>
+							Trenutno nemamo stranu koju ste tražili
+						</h2>
+						<p>
+							Možda pretragom stignete do željene strane
+						</p>
+						<ul class="search">
+							<input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="<?php _e( 'Pretraga', 'html5blank' ); ?>">
+							<a href="javascript:void(0)">
+								<span class="fa fa-search"></span>
+							</a>
+						</ul>
+						<h3 class="pY20">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<a href="<?php echo home_url(); ?>">Vratite se na našu početnu stranu!!!</a>
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
 
 		</section>
 		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
