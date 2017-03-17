@@ -174,7 +174,7 @@
                     <ul>
                         <?php
                         $args = array(
-                            'showposts' => '16',
+                            'showposts' => '12',
                             'cat' => 3
                         );
                         // The Query
