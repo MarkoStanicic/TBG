@@ -20,7 +20,9 @@
                     dolorem ea esse est harum labore magni maxime minima molestias non, perspiciatis porro possimus
                     quaerat reiciendis rerum tempora?
                 </p>
-                <p>Look around you. You'll see two councilmen, a union official, couple off-duty cops and a judge. I wouldn't have a second's hesitation of blowing your head off in front of them. Now, that's power you can't buy. That's the power of fear.</p>
+                <p>
+                    Look around you. You'll see two councilmen, a union official, couple off-duty cops and a judge. I wouldn't have a second's hesitation of blowing your head off in front of them. Now, that's power you can't buy. That's the power of fear.
+                </p>
                 <div class="cnt-header pY20">
                     <div class="cnt-title">
                         <h3>

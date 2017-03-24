@@ -26,7 +26,7 @@
 	        			'left': stickyOffsetLeft,
 	        			'overflow': 'auto',
 					    'height': 'calc(100% + 40px)',
-					    'width': 'calc(' + stickyWidth + 'px + 30px)',
+					    'width': stickyWidth,
 					    'margin-left': '-15px',
 					    'padding': '0 15px'
 	        		});

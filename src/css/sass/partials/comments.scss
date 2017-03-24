@@ -1,0 +1,69 @@
+#comments {
+        margin-bottom: 60px;
+        overflow: hidden;
+        h3#reply-title {
+                margin-bottom: 15px;
+                font-size: 20px;
+                width: 100%;
+                position: relative;
+                color: #111;
+        }
+        span.required {
+                color: #ff0000;
+        }
+        .comment-notes {
+                font-size: 10px;
+                color: #aaa;
+                letter-spacing: 0.03em;
+                font-weight: 300;
+        }
+        textarea {
+                width: 100%;
+                resize: none;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+                padding: 10px;
+        }
+        p {
+                &.col-sm-4 {
+                        &:first-child {
+                                padding-left: 0;
+                        }
+                        input {
+                                display: block;
+                                width: 100%;
+                                vertical-align: middle;
+                                border: 1px solid rgba(0, 0, 0, 0.5);
+                                outline: 0;
+                                padding: 10px;
+                                height: 40px;
+                                line-height: 38px;
+                                &:required {
+                                        background-image: url('http://cdn2.hubspot.net/hub/391043/file-1658853814-png/Blog_Images/200x200_Images/All_activities_1-red.png');
+                                        background-repeat: no-repeat;
+                                        background-size: 8px;
+                                        background-position: 98% 5px;
+                                }
+                        }
+                }
+                &.no-left-padding {
+                        padding-left: 0;
+                }
+                #submit {
+                        background: none;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        color: #888;
+                        padding: 7px 21px;
+                        float: left;
+                        border: 1px solid #888;
+                        width: inherit;
+                        transition: all 0.2s ease;
+                        &:hover {
+                                background: $blue;
+                                transition: all 0.2s ease;
+                                border-color: $blue;
+                                color: #fff;
+                        }
+                }
+        }
+}
