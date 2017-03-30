@@ -40,26 +40,31 @@
 
 			<!-- social links -->
 			<div class="social">
-				<div class="container">
-					<ul>
-						<li>
-							<a href="#">
-								<span class="fa fa-facebook"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-instagram"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="fa fa-pinterest"></span>
-							</a>
-						</li>
-					</ul>
-				</div><!-- . / endsocial links -->
-			</div>
+				<ul>
+					<li>
+						<a href="kontakt">
+							Kontakt
+						</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#">
+							<span class="fa fa-facebook"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-instagram"></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="fa fa-pinterest"></span>
+						</a>
+					</li>
+				</ul>
+			</div><!-- . / endsocial links -->
 
 
 			<!-- header -->
