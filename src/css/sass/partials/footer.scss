@@ -12,6 +12,9 @@
         font-size: 30px;
         margin-bottom: 15px;
     }
+    a {
+        color: $blue-light;
+    }
 
 }
 //== Middle footer section
@@ -102,12 +105,21 @@
         ul {
             li {
                 float: left;
-                margin-bottom: 5px;
 
                 a img {
                     max-width: 80px;
                     height:80px;
-                    padding:3px;
+                    margin: 4px;
+                    -webkit-transition: 0.5s; /* Safari */
+                    transition: 0.5s;
+
+                    &:hover {
+                        -webkit-transform:scale(1.1); /* Safari and Chrome */
+                        -moz-transform:scale(1.1); /* Firefox */
+                        -ms-transform:scale(1.1); /* IE 9 */
+                        -o-transform:scale(1.1); /* Opera */
+                        transform:scale(1.1);
+                    }
                 }
             }
         }
@@ -120,14 +132,14 @@
 
                 .fa {
                     color: #fff;
-                    padding: 15px;
+                    padding: 10px;
                     margin-right: 10px;
                     border-radius: 6px;
                     font-size: 18px;
                 }
                 .fa-facebook {
                     background: #3c5899;
-                    padding: 15px 17px;
+                    padding: 10px 12px;
                 }
                 .fa-instagram {
                     background: #3d739f;

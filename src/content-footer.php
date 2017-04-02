@@ -18,9 +18,8 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto cum cupiditate
                     dolorem ea esse est harum labore magni maxime minima molestias non, perspiciatis porro possimus
-                    quaerat reiciendis rerum tempora?
+                    quaerat reiciendis rerum tempora? Look around you. You'll see two councilmen, a union official, couple off-duty cops and a judge. I wouldn't have a second's hesitation of blowing your head off in front of them.
                 </p>
-                <p>Look around you. You'll see two councilmen, a union official, couple off-duty cops and a judge. I wouldn't have a second's hesitation of blowing your head off in front of them. Now, that's power you can't buy. That's the power of fear.</p>
                 <div class="cnt-header pY20">
                     <div class="cnt-title">
                         <h3>
@@ -69,7 +68,7 @@
                         <?php
                         //== arguments
                         $args = array(
-                            'posts_per_page' => 4
+                            'posts_per_page' => 3
                         );
                         query_posts($args);
                         while (have_posts()) : the_post();
@@ -174,7 +173,7 @@
                     <ul>
                         <?php
                         $args = array(
-                            'showposts' => '12',
+                            'showposts' => '8',
                             'cat' => 3
                         );
                         // The Query
