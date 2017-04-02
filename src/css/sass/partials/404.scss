@@ -21,18 +21,18 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         transform: translateY(-50%);
-        left: 20%;
+        left: 30%;
     }
     h1 {
         color: $white-color;
-        font-size: 86px;
+        font-size: 64px;
     }
     h2 {
         color: $grey-light;
-        font-size: 48px;
+        font-size: 32px;
     }
     p {
-        font-size: 28px;
+        font-size: 22px;
         color: $grey-lighter;
     }
     ul {
@@ -40,9 +40,9 @@
         input {
             display: block;
             width: 300px;
-            height: 50px;
+            height: 40px;
             float: left;
-            font-size: 22px;
+            font-size: 18px;
             padding-left: 10px;
         }
         a {
@@ -51,10 +51,23 @@
             span {
                 color: $blue-light;
                 background: $white-color;
-                font-size: 28px;
-                width: 55px;
-                height: 55px;
-                line-height: 55px;
+                font-size: 26px;
+                width: 46px;
+                height: 46px;
+                line-height: 45px;
+                -webkit-transition: 1s; /* Safari */
+                transition: 1s;
+                
+                &:hover {
+                    color: $white-color;
+                    background: $blue-darker;
+                    transition-delay: ease-in;
+                    -webkit-webkit-transition-timing-function: ease-in;
+                    -moz-webkit-transition-timing-function: ease-in;
+                    -ms-webkit-transition-timing-function: ease-in;
+                    -o-webkit-transition-timing-function: ease-in;
+                    webkit-transition-timing-function: ease-in;
+                }
             }
         }
     }
@@ -68,5 +81,20 @@
         a {
             color: $white-color;
         }
+    }
+
+}
+
+@media all and (max-width: 819px) {
+    #post-404 {
+        background: $blue-light;
+        .img-center {
+            display: none;
+        }
+
+        .wrap-text {
+            position: relative;
+        }
+
     }
 }

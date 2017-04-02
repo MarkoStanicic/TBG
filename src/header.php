@@ -70,6 +70,7 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 				<div class="img-wrapper">
+					<img src="<?php echo get_template_directory_uri();?>/img/header/belgrade-1.jpg"alt="">
 				</div>
 					<!-- logo -->
 <!--					<div class="logo">-->

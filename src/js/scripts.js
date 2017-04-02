@@ -46,11 +46,11 @@
 
 		if (hour > 6 && hour < 18) {
 			imgWrapper.css({
-				'background-image': 'url(http://localhost/tbg/wp-content/themes/TBG/src/img/header/belgrade-1.jpg)'
+				'background-image': 'url("<?php echo get_template_directory_uri();?>/img/torn-page.jpg")'
 			});
 		} else {
 			imgWrapper.css({
-				'background-image': 'url(http://localhost/tbg/wp-content/themes/TBG/src/img/header/belgrade-4.jpg)'
+				'background-image': 'url(http://localhost/welovebelgrade/wp-content/themes/TBG/src/img/header/belgrade-4.jpg)'
 			});
 		}
 
