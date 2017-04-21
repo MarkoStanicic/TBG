@@ -449,11 +449,11 @@ p {
 .third-section .container {
   padding: 0; }
 
-.third-section .col-sm-5 {
+.third-section .col-sm-4 {
   padding-left: 30px; }
-  .third-section .col-sm-5 .sectionTitle ul li {
+  .third-section .col-sm-4 .sectionTitle ul li {
     display: inline-block; }
-    .third-section .col-sm-5 .sectionTitle ul li a {
+    .third-section .col-sm-4 .sectionTitle ul li a {
       padding: 8px 16px;
       line-height: 25px;
       display: inline-block;
@@ -465,16 +465,16 @@ p {
       letter-spacing: 0.03em;
       color: #fff;
       transition: all 0.2s ease; }
-      .third-section .col-sm-5 .sectionTitle ul li a.active {
+      .third-section .col-sm-4 .sectionTitle ul li a.active {
         background-color: #47b0ed; }
-      .third-section .col-sm-5 .sectionTitle ul li a:hover {
+      .third-section .col-sm-4 .sectionTitle ul li a:hover {
         background-color: #47b0ed;
         transition: all 0.2s ease; }
 
 .third-section .sectionTitle {
   margin-top: 40px; }
 
-.third-section .col-sm-7.column .thumbHolder {
+.third-section .col-sm-8.column .thumbHolder {
   width: calc(100% + 30px);
   margin-left: -15px; }
 
