@@ -13,7 +13,7 @@
                     $cat_id_section_three = 19;
                     //== arguments
                     $argsThree = array(
-                        'posts_per_page' => 5,
+                        'posts_per_page' => 3,
                         'cat' => $cat_id_section_three
                     );
                     query_posts($argsThree);
