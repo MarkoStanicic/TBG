@@ -2,7 +2,7 @@
 <section class="third-section">
     <div class="container">
         <div class="row">
-            <div class="col-sm-7 column">
+            <div class="col-sm-8 column">
                 <div class="sectionTitle">
                     <span class="title">
                         Poslednji Postovi
@@ -66,14 +66,14 @@
                             </p>
                             <button href="<?php get_permalink(); ?>">READ MORE</button>
                         </div>
-                    </div>                            
+                    </div>
                 </div>
                 <?php
                     endwhile;
                     wp_reset_query();
                 ?>
             </div>
-            <div class="col-sm-5 column sidebar">
+            <div class="col-sm-4 column sidebar">
                 <div class="sidebarWidget">
                     <div class="sectionTitle">
                         <ul>

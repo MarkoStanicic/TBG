@@ -662,21 +662,24 @@ p {
       color: #fff; }
     .header .nav ul.search input {
       display: none;
-      height: 25px;
+      top: 3px;
+      height: 18px;
       padding: 8px 12px;
       font-size: 14px;
       background-color: #333946;
-      width: 350px;
-      max-width: 500px;
+      width: 200px;
+      border-radius: 16px;
+      max-width: 300px;
       border: none;
       margin: 0;
       color: #fff;
       position: absolute;
-      top: 100%;
-      right: -10px;
+      right: 25px;
       z-index: 1;
       transition: height ease-out 0.2s;
       -webkit-transition: height ease-out 0.2s; }
+    .header .nav ul.search textarea:focus, .header .nav ul.search input:focus {
+      outline: none; }
 
 /**
  * partials/nav
