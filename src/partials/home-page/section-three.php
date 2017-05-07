@@ -13,14 +13,14 @@
                     $cat_id = 23;
                     //== arguments
                     $args = array(
-                        'posts_per_page' => 5,
+                        'posts_per_page' => 3,
                         'cat' => $cat_id
                     );
                     query_posts($args);
                     while (have_posts()) : the_post();
                 ?>
-                <div class="thumbHolder">
-                    <div class="imgHolder">
+                <div class="thumbHolder col-sm-12">
+                    <div class="imgHolder col-sm-6">
                         <a href="<?php the_permalink() ?>">
                             <img src="<?php the_post_thumbnail_url(); ?>" class="thumb">
                         </a>
@@ -28,33 +28,7 @@
                             <?php echo get_cat_name( $cat_id ) ?>
                         </span>
                     </div>
-                    <div class="cnt">
-                        <header>
-                            <span class="getAuthor">
-                                <?php
-                                    echo 'By ';
-                                    echo the_author_posts_link();
-                                ?>
-                            </span>
-                            <span class="postTime">
-                                <?php
-                                    echo ' / <i class="fa fa-clock-o"></i> ';
-                                    echo get_post_time('F d, Y.');
-                                ?>
-                            </span>
-                            <span class="postViews">
-                                <?php
-                                    echo ' / <i class="fa fa-eye"></i> ';
-                                    echo getPostViews(get_the_ID());
-                                ?>
-                            </span>
-                            <span class="commentNum">
-                                <?php
-                                    echo ' / <i class="fa fa-comment-o"></i> ';
-                                    echo comments_number( '0', '1', '%' );
-                                ?>
-                            </span>
-                        </header>
+                    <div class="cnt col-sm-6">
                         <div class="textCnt">
                             <span class="thumbTitle">
                                 <a href="<?php the_permalink() ?>">
@@ -66,6 +40,32 @@
                             </p>
                             <button href="<?php get_permalink(); ?>">READ MORE</button>
                         </div>
+                        <!--<header>
+                            <span class="getAuthor">
+                                <?php
+/*                                echo 'By ';
+                                echo the_author_posts_link();
+                                */?>
+                            </span>
+                            <span class="postTime">
+                                <?php
+/*                                echo ' / <i class="fa fa-clock-o"></i> ';
+                                echo get_post_time('F d, Y.');
+                                */?>
+                            </span>
+                            <span class="postViews">
+                                <?php
+/*                                echo ' / <i class="fa fa-eye"></i> ';
+                                echo getPostViews(get_the_ID());
+                                */?>
+                            </span>
+                            <span class="commentNum">
+                                <?php
+/*                                echo ' / <i class="fa fa-comment-o"></i> ';
+                                echo comments_number( '0', '1', '%' );
+                                */?>
+                            </span>
+                        </header>-->
                     </div>
                 </div>
                 <?php
@@ -74,7 +74,7 @@
                 ?>
             </div>
             <div class="col-sm-4 column sidebar">
-                <div class="sidebarWidget">
+                <div class="sidebarWidgetNews">
                     <div class="sectionTitle">
                         <ul>
                             <li>
@@ -185,7 +185,7 @@
                     </style>
                 </div>
                 <!-- <div class="sidebarWidget sticky"> -->
-                <div class="sidebarWidget">
+                <div class="sidebarWidgetSocial">
                     <div class="sectionTitle">
                         <ul>
                             <li>

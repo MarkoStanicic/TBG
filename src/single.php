@@ -4,9 +4,6 @@
 	<!-- section -->
 	<section>
 		<div class="container">
-			<div class="col-sm-3">
-				<?php get_sidebar(); ?>
-			</div>
 			<div class="col-sm-9">
 				<?php
 					if (have_posts()): while (have_posts()) : the_post();
@@ -69,6 +66,9 @@
 				<!-- /article -->
 
 				<?php endif; ?>
+			</div>
+			<div class="col-sm-3">
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</section>
