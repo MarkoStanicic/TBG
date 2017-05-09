@@ -171,34 +171,7 @@
                         </div>
                     </div>
                     <ul>
-
                         <?php echo instagram($count = 8); ?>
-
-
-                        <!--                        --><?php //echo wdi_feed(array('id'=>'1')); ?>
-                        <?php
-/*                        $args = array(
-                            'showposts' => '8',
-                            'cat' => 3
-                        );
-                        // The Query
-                        query_posts($args);
-
-                        // The Loop
-                        while (have_posts()) : the_post();
-                            */?><!--
-                            <li class="recentPhotos">
-                                <div class="tumb">
-                                    <a data-fancybox="images" data-caption="My caption" href="<?php /*the_permalink() */?>">
-                                        <?php /*the_post_thumbnail(); */?>
-                                    </a>
-                                </div>
-                            </li>
-                            --><?php
-/*                        endwhile;
-                        // Reset Query
-                        wp_reset_query();
-                        */?>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

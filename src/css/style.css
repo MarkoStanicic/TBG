@@ -846,13 +846,13 @@ p {
   float: left; }
   .social-footer ul li .fa {
     color: #fff;
-    padding: 15px;
+    padding: 10px;
     margin-right: 10px;
     border-radius: 6px;
     font-size: 18px; }
   .social-footer ul li .fa-facebook {
     background: #3c5899;
-    padding: 15px 17px; }
+    padding: 10px 12px; }
   .social-footer ul li .fa-instagram {
     background: #3d739f; }
   .social-footer ul li .fa-pinterest {
