@@ -4,11 +4,7 @@
 	<!-- section -->
 	<section class="single">
 		<div class="container">
-			<div class="col-sm-3">
-				<?php get_sidebar(); ?>
-			</div>
-			<div class="col-sm-9 single-cnt">
-
+			<div class="col-sm-9">
 				<?php
 					$category = get_the_category();
 					$firstCategory = $category[0]->cat_name;
@@ -92,6 +88,9 @@
 				<!-- /article -->
 
 				<?php endif; ?>
+			</div>
+			<div class="col-sm-3">
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</section>
