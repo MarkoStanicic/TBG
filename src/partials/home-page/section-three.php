@@ -10,10 +10,11 @@
                 </div>
                 <?php
                     //== set category id
-                    $cat_id_section_three = 23;
+                    $cat_id_section_three = 19;
                     //== arguments
-                    $args = array(
+                    $argsThree = array(
                         'posts_per_page' => 3,
+                        'cat' => $cat_id_section_three
                         'cat' => $cat_id
                     );
                     query_posts($argsThree);
