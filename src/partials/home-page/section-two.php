@@ -4,11 +4,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="sectionTitle">
-            <span class="title">
-                Vesti iz nocnog zivota
-            </span>
+                    <span class="title">
+                        Vesti iz nocnog zivota
+                    </span>
                 </div>
-                <div class="row">
+                <div>
                     <?php
                     //== set category id
                     $cat_id = 4;

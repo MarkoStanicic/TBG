@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <ul>
-                        <?php echo instagram($count = 8); ?>
+                        <?php echo instagram($count = 8, $width = 100, $height = 100); ?>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

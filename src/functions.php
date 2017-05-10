@@ -574,7 +574,7 @@ function instagram($count = 8, $width = 640, $height = 640) {
     $size = wp_is_mobile() ? 'low_resolution' : 'standard_resolution';
     $url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?access_token=' . $access_token . '&count=' . $count;
     $cache_location = './' . sha1($url) . '.json';
-    $cache_time = '-1 hour';
+    $cache_time = '-0.5 hour';
 
     if (file_exists($cache_location) && filemtime($cache_location) > strtotime($cache_time)) {
         // If a cache file exists, and it is newer than 1 hour, use it
