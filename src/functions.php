@@ -597,10 +597,6 @@ function instagram($count = 8, $width = 640, $height = 640) {
 }
 
 
-
-
-
-
 /**
  * AJAC filter posts by taxonomy term
  */
