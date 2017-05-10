@@ -15,7 +15,6 @@
                     $argsThree = array(
                         'posts_per_page' => 3,
                         'cat' => $cat_id_section_three
-                        'cat' => $cat_id
                     );
                     query_posts($argsThree);
                     while (have_posts()) : the_post();
