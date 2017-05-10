@@ -10,7 +10,7 @@
                 </div>
                 <?php
                     //== set category id
-                    $cat_id_section_three = 19;
+                    $cat_id_section_three = 23;
                     //== arguments
                     $args = array(
                         'posts_per_page' => 3,
