@@ -12,9 +12,9 @@
                     //== set category id
                     $cat_id = 23;
                     //== arguments
-                    $args = array(
+                    $argsThree = array(
                         'posts_per_page' => 3,
-                        'cat' => $cat_id
+                        'cat' => $cat_id_section_three
                     );
                     query_posts($args);
                     while (have_posts()) : the_post();
