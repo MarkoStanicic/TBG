@@ -2,14 +2,28 @@
 
 	<main role="main" aria-label="Content">
 		<!-- section -->
-		<section>
+		<section class="category">
 			<div class="container">
                 <div class="col-sm-9">
-                    <h1><?php _e( 'Category: ', 'html5blank' ); single_cat_title(); ?></h1>
+	                <?php
+	                $category = get_the_category();
+	                $firstCategory = $category[0]->cat_name;
+	                ?>
+	                <ul class="tbg-breadcrumb">
+		                <li>
+			                <span class="cat"><?php echo $firstCategory; ?></span>
+			                <span class="bred-elem">Home</span>
+			                <span class="bred-elem"><?php echo $firstCategory; ?></span>
+			                <span class="bred-elem"><?php the_title(); ?></span>
+		                </li>
+	                </ul>
 
-                    <?php get_template_part('loop'); ?>
+	                <?php get_template_part('loop', 'category'); ?>
 
-                    <?php get_template_part('pagination'); ?>
+	                <div class="col-sm-6 col-sm-offset-3">
+		                <?php get_template_part('pagination'); ?>
+	                </div>
+
                 </div>
                 <div class="col-sm-3">
                     <?php get_sidebar(); ?>

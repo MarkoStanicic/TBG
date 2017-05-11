@@ -572,16 +572,18 @@ function instagram($count = 8, $width = 640, $height = 640) {
     $user_id = 4722701623;
     $access_token = '4722701623.97d1bb3.ebc01675e74642d985e00d85302dad4b';
     $size = wp_is_mobile() ? 'low_resolution' : 'standard_resolution';
-    $url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?access_token=' . $access_token . '&count=' . $count;
-    $cache_location = './' . sha1($url) . '.json';
-    $cache_time = '-1 hour';
+    $url = 'https://api.instagram.com/v1/users/4722701623/media/recent/?access_token=' . $access_token . '&count=' . $count;
+    $cache_location = './wp-includes' . sha1($url) . '.json';
+    $cache_time = '-0.5 hour';
 
     if (file_exists($cache_location) && filemtime($cache_location) > strtotime($cache_time)) {
         // If a cache file exists, and it is newer than 1 hour, use it
         $jsonData = json_decode(file_get_contents($cache_location));
+        console.log('succes');
     } else {
         $jsonData = json_decode((file_get_contents($url)));
         file_put_contents($cache_location, json_encode($jsonData));
+        console.log('bummer');
     }
 
     foreach ($jsonData->data as $key => $value) {
@@ -595,7 +597,6 @@ function instagram($count = 8, $width = 640, $height = 640) {
     }
 
 }
-
 
 /**
  * AJAC filter posts by taxonomy term
@@ -745,7 +746,7 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 }
 
 function assets() {
-    wp_enqueue_script('js/scripts', '/wp-content/themes/tbg/src/js/scripts.js', ['jquery'], null, true);
+    wp_enqueue_script('js/scripts', '/wp-content/themes/belgrade/src/js/scripts.js', ['jquery'], null, true);
     wp_localize_script( 'js/scripts', 'thebelgradeguide', array(
         'nonce'    => wp_create_nonce( 'thebelgradeguide' ),
         'ajax_url' => admin_url( 'admin-ajax.php' )
