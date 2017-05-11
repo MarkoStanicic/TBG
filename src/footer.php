@@ -18,9 +18,9 @@
 
 </div>
 <!-- /wrapper -->
-	<script src="<?php echo get_template_directory_uri(); ?>/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.flexslider-min.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/lib/jquery.fancybox.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<?php wp_footer(); ?>
 
 	<!-- analytics -->

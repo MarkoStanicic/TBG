@@ -572,7 +572,7 @@ function instagram($count = 8, $width = 640, $height = 640) {
     $user_id = 4722701623;
     $access_token = '4722701623.97d1bb3.ebc01675e74642d985e00d85302dad4b';
     $size = wp_is_mobile() ? 'low_resolution' : 'standard_resolution';
-    $url = 'https://api.instagram.com/v1/users/' . $user_id . '/media/recent/?access_token=' . $access_token . '&count=' . $count;
+    $url = 'https://api.instagram.com/v1/users/4722701623/media/recent/?access_token=' . $access_token . '&count=' . $count;
     $cache_location = './' . sha1($url) . '.json';
     $cache_time = '-0.5 hour';
 
@@ -595,7 +595,6 @@ function instagram($count = 8, $width = 640, $height = 640) {
     }
 
 }
-
 
 /**
  * AJAC filter posts by taxonomy term
