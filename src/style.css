@@ -925,9 +925,9 @@ p {
   overflow: hidden;
   margin-bottom: 30px; }
   .category article .img img {
-    position: absolute;
+    position: relative;
     top: 0;
-    margin-top: -175px;
+    margin-top: 0px;
     left: 0;
     height: auto;
     width: 100%; }
@@ -962,6 +962,28 @@ p {
     line-height: 1.6;
     font-style: italic;
     color: #48B0ED; }
+
+.category .text-center {
+  text-align: center; }
+  .category .text-center .pagination {
+    margin-top: 44px;
+    text-align: center;
+    clear: both; }
+    .category .text-center .pagination .page-numbers {
+      display: inline-block;
+      text-align: center;
+      width: 40px;
+      height: 35px;
+      line-height: 30px;
+      border: 2px solid #47b0ed;
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-weight: 400;
+      color: #111; }
+    .category .text-center .pagination .current {
+      background-color: #47b0ed;
+      color: #fff; }
 
 /**
  * partials/footer

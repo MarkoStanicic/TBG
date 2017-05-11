@@ -6,17 +6,20 @@
 
 
 		<div class="col-sm-12">
-			<div class="col-sm-3">
+			<div class="col-sm-4">
 
 				<!-- post thumbnail -->
 				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 					<a class="img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-						<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
+						<?php the_post_thumbnail(array(300,150)); // Declare pixel size you need inside the array ?>
 					</a>
+					<span class="thumbCategory">
+                            <?php echo get_cat_name() ?>
+                    </span>
 				<?php endif; ?>
 				<!-- /post thumbnail -->
 			</div>
-			<div class="col-sm-9">
+			<div class="col-sm-8">
 				<!-- post details -->
 				<ul class="post-data">
 					<li>
@@ -35,10 +38,13 @@
 				<!-- /post title -->
 
 			<div class="single-content">
-				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
+				<p class="clearfix">
+                    <?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
+                </p>
+                <button href="<?php get_permalink(); ?>">READ MORE</button>
 			</div>
 
-			<?php edit_post_link(); ?>
+
 
 			</div>
 

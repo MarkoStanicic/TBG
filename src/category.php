@@ -14,13 +14,12 @@
 			                <span class="cat"><?php echo $firstCategory; ?></span>
 			                <span class="bred-elem">Home</span>
 			                <span class="bred-elem"><?php echo $firstCategory; ?></span>
-			                <span class="bred-elem"><?php the_title(); ?></span>
 		                </li>
 	                </ul>
 
 	                <?php get_template_part('loop', 'category'); ?>
 
-	                <div class="col-sm-6 col-sm-offset-3">
+	                <div class="col-sm-12 text-center">
 		                <?php get_template_part('pagination'); ?>
 	                </div>
 
