@@ -858,6 +858,11 @@ p {
 .category .single-cnt {
   margin-top: 40px; }
 
+.category .flexslider {
+  height: 500px; }
+  .category .flexslider .flex-viewport {
+    height: 500px; }
+
 .category .tbg-breadcrumb span {
   display: inline-block;
   margin: 0 3px; }
@@ -982,7 +987,7 @@ p {
       margin-top: 5px;
       margin-bottom: 5px;
       font-weight: 400;
-      color: #111; }
+      color: #47b0ed; }
     .category .text-center .pagination .current {
       background-color: #47b0ed;
       color: #fff; }

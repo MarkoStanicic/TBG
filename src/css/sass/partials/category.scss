@@ -3,6 +3,13 @@
         margin-top: 40px;
     }
 
+    .flexslider {
+        height: 500px;
+        .flex-viewport {
+            height: 500px;
+        }
+    }
+
     .tbg-breadcrumb {
         span {
             display: inline-block;
@@ -150,7 +157,7 @@
                 margin-top: 5px;
                 margin-bottom: 5px;
                 font-weight: 400;
-                color: #111;
+                color: #47b0ed;
             }
             .current {
                 background-color: #47b0ed;

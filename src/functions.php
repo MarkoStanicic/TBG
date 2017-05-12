@@ -332,7 +332,10 @@ function html5wp_pagination()
         'base' => str_replace($big, '%#%', get_pagenum_link($big)),
         'format' => '?paged=%#%',
         'current' => max(1, get_query_var('paged')),
-        'total' => $wp_query->max_num_pages
+        'total' => $wp_query->max_num_pages,
+        'prev_text' => __( '<i class="fa fa-long-arrow-left"></i>', 'textdomain' ),
+	    'next_text' => __( '<i class="fa fa-long-arrow-right"></i>', 'textdomain' )
+
     ));
 }
 
@@ -746,7 +749,7 @@ function vb_ajax_pager( $query = null, $paged = 1 ) {
 }
 
 function assets() {
-    wp_enqueue_script('js/scripts', '/wp-content/themes/belgrade/src/js/scripts.js', ['jquery'], null, true);
+    wp_enqueue_script('js/scripts', '/wp-content/themes/tbg/src/js/scripts.js', ['jquery'], null, true);
     wp_localize_script( 'js/scripts', 'thebelgradeguide', array(
         'nonce'    => wp_create_nonce( 'thebelgradeguide' ),
         'ajax_url' => admin_url( 'admin-ajax.php' )
