@@ -22,21 +22,20 @@
 					while (have_posts()) : the_post();
 						?>
 						<li>
-							<div style="height: 500px; background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>'); background-repeat: no-repeat; background-size: 100%;"></div>
 							<div class="inner">
-                                <div class="inner-cnt">
-                                    <div class="post-cat">
+                                <div style="height: 500px; background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>'); background-repeat: no-repeat; background-size: 100%;">
+                                </div>
+                                <div class="inner-wrap">
+                                    <div class="inner-cnt">
+                                        <div class="post-cat">
 
-                                    </div>
-                                    <a href="<?php the_permalink() ?>" class="thumbHolder">
-                                        <span class="thumbShadow">
-
+                                        </div>
+                                        <a href="<?php the_permalink() ?>" class="thumbHolder">
                                             <!-- post title -->
                                             <h3 class="title">
                                                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                                             </h3>
                                             <!-- /post title -->
-                                            </span>
                                             <!-- post details -->
                                             <ul class="post-data">
                                                 <li>
@@ -47,10 +46,10 @@
                                                 </li>
                                             </ul>
                                             <!-- /post details -->
-
-                                        </span>
-                                    </a>
-                                    <button href="<?php get_permalink(); ?>">READ MORE</button>
+                                            </span>
+                                        </a>
+                                        <button href="<?php get_permalink(); ?>">READ MORE</button>
+                                    </div>
                                 </div>
                             </div>
 						</li>

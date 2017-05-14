@@ -860,6 +860,22 @@ p {
   height: 500px; }
   .category .flexslider .flex-viewport {
     height: 500px; }
+  .category .flexslider .slides .inner {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    padding: 0 200px; }
+    .category .flexslider .slides .inner .inner-wrap {
+      width: 100%;
+      height: 100%;
+      display: table; }
+      .category .flexslider .slides .inner .inner-wrap .inner-cnt {
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center; }
 
 .category .tbg-breadcrumb span {
   display: inline-block;
