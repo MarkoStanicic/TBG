@@ -26,18 +26,28 @@
 							<div class="inner">
                                 <div class="inner-cnt">
                                     <div class="post-cat">
-                                        <span class="thumbCategory">
-                                            <?php echo get_cat_name( $cat_id_slider ) ?>
-                                        </span>
+
                                     </div>
                                     <a href="<?php the_permalink() ?>" class="thumbHolder">
                                         <span class="thumbShadow">
 
-                                            <span class="thumbTitle">
-                                            <?php
-                                                the_title();
-                                            ?>
+                                            <!-- post title -->
+                                            <h3 class="title">
+                                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                            </h3>
+                                            <!-- /post title -->
                                             </span>
+                                            <!-- post details -->
+                                            <ul class="post-data">
+                                                <li>
+                                                    <span>By <?php the_author_posts_link(); ?></span>
+                                                    <span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
+                                                    <span><i class="fa fa-eye"></i> <?php getPostViews(get_the_ID()); ?></span>
+                                                    <span><i class="fa fa-comment-o"></i> <?php echo comments_number( '0', '1', '%' ); ?></span>
+                                                </li>
+                                            </ul>
+                                            <!-- /post details -->
+
                                         </span>
                                     </a>
                                     <button href="<?php get_permalink(); ?>">READ MORE</button>

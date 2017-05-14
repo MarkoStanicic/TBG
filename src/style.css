@@ -921,22 +921,23 @@ p {
       color: #48B0ED;
       text-transform: uppercase;
       font-weight: 400; }
-  .category article .post-data .category-content button {
-    border: 1px solid #888;
-    padding: 4px 12px;
-    color: #888;
-    z-index: 1;
-    text-transform: uppercase;
-    font-size: 10px;
+
+.category article .category-content button {
+  border: 1px solid #888;
+  padding: 4px 12px;
+  color: #888;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  background: none; }
+  .category article .category-content button:hover {
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
-    background: none; }
-    .category article .post-data .category-content button:hover {
-      transition: all 0.2s ease-in-out;
-      -webkit-transition: all 0.2s ease-in-out;
-      background: #47b0ed;
-      border-color: #47b0ed;
-      color: #fff; }
+    background: #47b0ed;
+    border-color: #47b0ed;
+    color: #fff; }
 
 .category article .img {
   width: 100%;
