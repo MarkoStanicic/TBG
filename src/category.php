@@ -22,25 +22,28 @@
 					while (have_posts()) : the_post();
 						?>
 						<li>
-							<div>
-
-							</div>
 							<div style="height: 500px; background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>'); background-repeat: no-repeat; background-size: 100%;"></div>
-							<a href="<?php the_permalink() ?>" class="thumbHolder">
-                                <span class="thumbShadow">
-                                    <span class="thumbCategory">
-                                        <?php echo get_cat_name( $cat_id_slider ) ?>
-                                    </span>
-                                    <span class="thumbTitle">
-                                    <?php
-                                    the_title();
-                                    ?>
-                                    </span>
-                                </span>
-								<!--<img src="<?php /*the_post_thumbnail_url(); */?>" class="thumb">-->
-							</a>
+							<div class="inner">
+                                <div class="inner-cnt">
+                                    <div class="post-cat">
+                                        <span class="thumbCategory">
+                                            <?php echo get_cat_name( $cat_id_slider ) ?>
+                                        </span>
+                                    </div>
+                                    <a href="<?php the_permalink() ?>" class="thumbHolder">
+                                        <span class="thumbShadow">
+
+                                            <span class="thumbTitle">
+                                            <?php
+                                                the_title();
+                                            ?>
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <button href="<?php get_permalink(); ?>">READ MORE</button>
+                                </div>
+                            </div>
 						</li>
-						li.
 						<?php
 					endwhile;
 					wp_reset_query();
