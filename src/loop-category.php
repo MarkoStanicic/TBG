@@ -39,7 +39,7 @@
 					<p class="clearfix">
 						<?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
 					</p>
-					<button href="<?php get_permalink(); ?>">READ MORE</button>
+					<button class="readmore" href="<?php get_permalink(); ?>">READ MORE</button>
 				</div>
 			</div>
 

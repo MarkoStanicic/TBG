@@ -201,6 +201,23 @@ p {
 .pX40 {
   padding: 0 40px; }
 
+.readmore {
+  border: 1px solid #888;
+  padding: 4px 12px;
+  color: #888;
+  z-index: 1;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  background: none; }
+  .readmore:hover {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    background: #47b0ed;
+    border-color: #47b0ed;
+    color: #fff; }
+
 .thumbHolder {
   position: relative;
   display: block; }
@@ -876,8 +893,11 @@ p {
         width: 100%;
         height: 100%;
         display: table-cell;
-        vertical-align: middle;
-        text-align: center; }
+        vertical-align: middle; }
+        .category .flexslider .slides .inner .inner-wrap .inner-cnt .cnt-wrap {
+          display: inline-block;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
 
 .category .tbg-breadcrumb span {
   display: inline-block;
@@ -939,23 +959,6 @@ p {
       color: #48B0ED;
       text-transform: uppercase;
       font-weight: 400; }
-
-.category article .category-content button {
-  border: 1px solid #888;
-  padding: 4px 12px;
-  color: #888;
-  z-index: 1;
-  text-transform: uppercase;
-  font-size: 10px;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  background: none; }
-  .category article .category-content button:hover {
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    background: #47b0ed;
-    border-color: #47b0ed;
-    color: #fff; }
 
 .category article .img {
   width: 100%;

@@ -1,0 +1,100 @@
+/**
+ * 404 Page CSS
+ * ---
+ */
+
+#post-404 {
+    /*background-image: url(http://localhost/welovebelgrade/wp-content/themes/TBG/src/img/torn-paper.png);
+    background-repeat: no-repeat;*/
+    text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+    .img-center {
+        position: relative;
+        top: 60px;
+    }
+    .wrap-text {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 30%;
+    }
+    h1 {
+        color: $white-color;
+        font-size: 64px;
+    }
+    h2 {
+        color: $grey-light;
+        font-size: 32px;
+    }
+    p {
+        font-size: 22px;
+        color: $grey-lighter;
+    }
+    ul {
+        display: inline-block;
+        input {
+            display: block;
+            width: 300px;
+            height: 40px;
+            float: left;
+            font-size: 18px;
+            padding-left: 10px;
+        }
+        a {
+            display: block;
+            float: left;
+            span {
+                color: $blue-light;
+                background: $white-color;
+                font-size: 26px;
+                width: 46px;
+                height: 46px;
+                line-height: 45px;
+                -webkit-transition: 1s; /* Safari */
+                transition: 1s;
+                
+                &:hover {
+                    color: $white-color;
+                    background: $blue-darker;
+                    transition-delay: ease-in;
+                    -webkit-webkit-transition-timing-function: ease-in;
+                    -moz-webkit-transition-timing-function: ease-in;
+                    -ms-webkit-transition-timing-function: ease-in;
+                    -o-webkit-transition-timing-function: ease-in;
+                    webkit-transition-timing-function: ease-in;
+                }
+            }
+        }
+    }
+    h3 {
+        color: $white-color;
+        i {
+            font-size: 30px;
+            vertical-align: middle;
+            color: $white-color;
+        }
+        a {
+            color: $white-color;
+        }
+    }
+
+}
+
+@media all and (max-width: 819px) {
+    #post-404 {
+        background: $blue-light;
+        .img-center {
+            display: none;
+        }
+
+        .wrap-text {
+            position: relative;
+        }
+
+    }
+}

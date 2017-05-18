@@ -22,33 +22,33 @@
 					while (have_posts()) : the_post();
 						?>
 						<li>
-							<div class="inner">
+                            <div class="post-wrap">
                                 <div style="height: 500px; background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>'); background-repeat: no-repeat; background-size: 100%;">
                                 </div>
-                                <div class="inner-wrap">
-                                    <div class="inner-cnt">
-                                        <div class="post-cat">
+                                <div class="inner">
+                                    <div class="inner-wrap">
+                                        <div class="inner-cnt">
+                                            <div class="cnt-wrap">
+                                                <div class="post-cat">
 
+                                                </div>
+                                                    <!-- post title -->
+                                                    <h3 class="title">
+                                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                                                    </h3>
+                                                    <!-- /post title -->
+                                                    <!-- post details -->
+                                                    <ul class="post-data">
+                                                        <li>
+                                                            <span>By <?php the_author_posts_link(); ?></span>
+                                                            <span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- /post details -->
+                                                    </span>
+                                                <button class="readmore" href="<?php get_permalink(); ?>">READ MORE</button>
+                                            </div>
                                         </div>
-                                        <a href="<?php the_permalink() ?>" class="thumbHolder">
-                                            <!-- post title -->
-                                            <h3 class="title">
-                                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                                            </h3>
-                                            <!-- /post title -->
-                                            <!-- post details -->
-                                            <ul class="post-data">
-                                                <li>
-                                                    <span>By <?php the_author_posts_link(); ?></span>
-                                                    <span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
-                                                    <span><i class="fa fa-eye"></i> <?php getPostViews(get_the_ID()); ?></span>
-                                                    <span><i class="fa fa-comment-o"></i> <?php echo comments_number( '0', '1', '%' ); ?></span>
-                                                </li>
-                                            </ul>
-                                            <!-- /post details -->
-                                            </span>
-                                        </a>
-                                        <button href="<?php get_permalink(); ?>">READ MORE</button>
                                     </div>
                                 </div>
                             </div>
