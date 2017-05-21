@@ -756,3 +756,18 @@ function assets() {
     ));
 }
 add_action('wp_enqueue_scripts', 'assets', 100);
+
+
+/**
+ * Googe maps
+ */
+
+function my_acf_google_map_api( $api ){
+
+    $api['key'] = 'AIzaSyDozQQ2CHJO9A-6fvun45yDHLm0wRsyZ0o';
+
+    return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
