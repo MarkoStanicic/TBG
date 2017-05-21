@@ -3,16 +3,21 @@
 	<main role="main" aria-label="Content">
 		<!-- section -->
 		<section class="category">
+            <?php
+            $category = get_the_category();
+            $categoryCategory = $category[0]->cat_name;
+            ?>
+            <!-- Slider -->
 			<div class="flexslider">
-				<ul class="slides">
+				<ul class="col-md-12 slides">
 					<?php
 					//== get meta data for category
 					// $key = the_field('slider_first_section');
 					// $slideKey = "Number of Slides in First Section";
 					//== set category id
-					$cat_id_slider = the_field('slider_first_section');
+					$cat_id_slider = the_field('slider_category_section');
 					//== set slide number
-					$slide_num = the_field('number_of_slides_in_first_section');
+					$slide_num = the_field('number_of_slides_in_category_section');
 					//== arguments
 					$args = array(
 						'posts_per_page' => $slide_num,
@@ -23,14 +28,15 @@
 						?>
 						<li>
                             <div class="post-wrap">
-                                <div style="height: 500px; background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>'); background-repeat: no-repeat; background-size: 100%;">
-                                </div>
+                                <div class="thumb" style="height: 450px; background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>');"></div>
                                 <div class="inner">
                                     <div class="inner-wrap">
                                         <div class="inner-cnt">
                                             <div class="cnt-wrap">
                                                 <div class="post-cat">
-
+                                                    <span class="thumbCategory">
+                                                        <?php echo $categoryCategory; ?>
+                                                    </span>
                                                 </div>
                                                     <!-- post title -->
                                                     <h3 class="title">
@@ -59,26 +65,10 @@
 					?>
 				</ul>
 			</div>
+            <!-- /Slider -->
 			<div class="container">
                 <div class="col-sm-9">
-	                <?php
-	                $category = get_the_category();
-	                $firstCategory = $category[0]->cat_name;
-	                ?>
-	                <ul class="tbg-breadcrumb">
-		                <li>
-			                <span class="cat"><?php echo $firstCategory; ?></span>
-			                <span class="bred-elem">Home</span>
-			                <span class="bred-elem"><?php echo $firstCategory; ?></span>
-		                </li>
-	                </ul>
-
 	                <?php get_template_part('loop', 'category'); ?>
-
-	                <div class="col-sm-12 text-center">
-		                <?php get_template_part('pagination'); ?>
-	                </div>
-
                 </div>
                 <div class="col-sm-3">
                     <?php get_sidebar(); ?>

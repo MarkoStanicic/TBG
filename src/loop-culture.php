@@ -1,12 +1,20 @@
 <?php
-$category = get_the_category();
-$categoryCategory = $category[0]->cat_name;
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args = array(
+    'cat' => 5,
+    'posts_per_page' => 5,
+    'include'  => array( 5, 21, 22, 23 ),
+    'paged' => $paged
+);
+// The Query
+query_posts( $args );
 ?>
 
 <!-- Section Title -->
 <div class="sectionTitle">
             <span class="title">
-                <?php echo $categoryCategory; ?>
+                <?php echo get_cat_name(5);?>
             </span>
 </div>
 <!-- /Section Title -->
@@ -14,14 +22,14 @@ $categoryCategory = $category[0]->cat_name;
 <ul class="tbg-breadcrumb">
     <li>
         <span class="bred-elem">Home</span>
-        <span class="bred-elem">Kategorija: "<?php echo $categoryCategory; ?>" </span>
+        <span class="bred-elem">Kategorija: "<?php echo get_cat_name(5);?>" </span>
     </li>
 </ul>
 <!-- /Breadcrumbs -->
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-	<div class="col-sm-12">
-	<!-- article -->
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div class="col-sm-12">
+        <!-- article -->
+        <article id="post-<?php the_ID(5); ?>" <?php post_class(); ?>>
             <div class="col-sm-12">
                 <div class="borderLine">
                 </div>
@@ -64,17 +72,17 @@ $categoryCategory = $category[0]->cat_name;
             </div>
         </article>
         <!-- /article -->
-	</div>
+    </div>
 
 <?php endwhile; ?>
 
 <?php else: ?>
-	<!-- article -->
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-	</article>
-	<!-- /article -->
-	</div>
+    <!-- article -->
+    <article>
+        <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+    </article>
+    <!-- /article -->
+    </div>
 <?php endif; ?>
 <!-- pagination -->
 <div class="col-sm-12 text-center">
