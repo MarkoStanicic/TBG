@@ -48,6 +48,7 @@
 						</a>
 					<?php endif; ?><!-- . / end post thumbnail -->
 
+
 					<!-- post details --><?php /*
 					<span class="date">
 						<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
@@ -59,8 +60,46 @@
 					<!-- /post details -->*/?>
 
 					<div class="single-content">
-						<?php the_content(); // Dynamic Content ?>
+						<div class="col-sm-8">
+							<?php the_content(); // Dynamic Content ?>
+						</div>
 					</div>
+
+					<div class="contact-details">
+						<div class="col-sm-4">
+							<div class="mapa">
+								<?php
+
+								$location = get_field('map');
+
+								if( !empty($location) ):
+									?>
+									<div class="acf-map">
+										<a data-fancybox data-src="#hidden-content-1" href="javascript:;">
+											<i class="fa fa-search-plus"></i>
+											<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+										</a>
+									</div>
+								<?php endif; ?>
+							</div>
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+					<div style="display: none;" id="hidden-content-1">
+					<?php
+
+						$location = get_field('map');
+
+						if( !empty($location) ):
+							?>
+							<div class="acf-map">
+								<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+							</div>
+					<?php endif; ?>
+					</div>
+
+
 
 					<?php /* the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
@@ -69,6 +108,33 @@
 					<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p> */?>
 
 					<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+					<div id="gall">
+						<?php
+
+						$images = get_field('gallery');
+
+						if( $images ): ?>
+							<div id="slider" class="flexslider">
+								<ul class="slides">
+									<?php foreach( $images as $image ): ?>
+										<li>
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+							<div id="carousel" class="flexslider">
+								<ul class="slides">
+									<?php foreach( $images as $image ): ?>
+										<li>
+											<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
+					</div>
+
 
 					<?php comments_template(); ?>
 

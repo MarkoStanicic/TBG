@@ -586,7 +586,6 @@ function instagram($count = 8, $width = 640, $height = 640) {
     } else {
         $jsonData = json_decode((file_get_contents($url)));
         file_put_contents($cache_location, json_encode($jsonData));
-        console.log('bummer');
     }
 
     foreach ($jsonData->data as $key => $value) {
@@ -771,3 +770,4 @@ function my_acf_google_map_api( $api ){
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+

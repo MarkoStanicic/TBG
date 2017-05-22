@@ -5,10 +5,27 @@
 
         //== Flexslider
         $(window).on("load", function (e) {
-            $('.flexslider').flexslider({
+            $('#slider-home .flexslider, #slider-category .flexslider').flexslider({
                 animation: 'slide',
                 controlNav: false,
                 directionNav: true,
+            });
+            $('#carousel').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                itemWidth: 210,
+                itemMargin: 5,
+                asNavFor: '#slider'
+            });
+
+            $('#slider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                animationLoop: false,
+                slideshow: false,
+                sync: "#carousel"
             });
         });
 
@@ -71,6 +88,15 @@
 
         $("[data-fancybox]").fancybox({
             // Options will go here
+        });
+
+        $(".acf-map").on('click', function() {
+
+            $.fancybox.open({
+                src  : '#hidden-content-1',
+                type : 'inline'
+            });
+
         });
 
     });

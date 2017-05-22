@@ -3,9 +3,10 @@
     <div class="container">
         <div class="row top">
             <div class="col-md-7 col-sm-7 col-xs-12 column">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <?php
+                <div id="slider-home">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <?php
                             //== get meta data for category
                             // $key = the_field('slider_first_section');
                             // $slideKey = "Number of Slides in First Section";
@@ -20,28 +21,29 @@
                             );
                             query_posts($args);
                             while (have_posts()) : the_post();
-                        ?>
-                        <li>
-                            <a href="<?php the_permalink() ?>" class="thumbHolder">
+                                ?>
+                                <li>
+                                    <a href="<?php the_permalink() ?>" class="thumbHolder">
                                 <span class="thumbShadow">
                                     <span class="thumbCategory">
                                         <?php echo get_cat_name( $cat_id_slider ) ?>
                                     </span>
                                     <span class="thumbTitle">
                                     <?php
-                                        the_title();
+                                    the_title();
                                     ?>
                                     </span>
                                 </span>
-                                <img src="<?php the_post_thumbnail_url(); ?>" class="thumb">
-                            </a>
-                        </li>
-                        <?php 
+                                        <img src="<?php the_post_thumbnail_url(); ?>" class="thumb">
+                                    </a>
+                                </li>
+                                <?php
                             endwhile;
                             wp_reset_query();
-                        ?>
-                    </ul>
-                </div>                    
+                            ?>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-md-5 col-sm-5 col-xs-12 column">
                 <?php
