@@ -160,6 +160,16 @@
 
 									endif;
 									?>
+									<ul>
+										<li><?php echo $title . '' ?></li>
+										<li><?php echo $pon . '' ?></li>
+										<li><?php echo $uto . '' ?></li>
+										<li><?php echo $sre . '' ?></li>
+										<li><?php echo $cet . '' ?></li>
+										<li><?php echo $pet . '' ?></li>
+										<li><?php echo $sub . '' ?></li>
+										<li><?php echo $ned . '' ?></li>
+									</ul>
 								</div>
 							</div>
 						</div>
