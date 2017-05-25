@@ -866,6 +866,14 @@ p {
     left: 0;
     height: auto;
     width: 100%; }
+  .single article .single-img h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(72, 176, 237, 0.5);
+    color: #fff; }
 
 .single article .col-sm-12 {
   background: #fff;
@@ -1491,6 +1499,14 @@ p {
     left: 0;
     height: auto;
     width: 100%; }
+  .single article .single-img h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(72, 176, 237, 0.5);
+    color: #fff; }
 
 .single article .col-sm-12 {
   background: #fff;
