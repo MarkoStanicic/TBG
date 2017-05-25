@@ -16,12 +16,14 @@
         	Kategorije
         </span>
     </div>
+
 	<ul class="categories">
 		<?php $obj_id = get_queried_object_id(); // category ID ?>
 		<?php wp_list_categories(array(
 			'child_of' => $obj_id
 //			/*'hide_empty' => false // use this to show ALL sub-categories, even empty ones; otherwise omit this*/
 		));
+		wp_reset_query();
 		?>
 <!--	--><?php
 /*		$parentscategory = "";
@@ -38,20 +40,14 @@
         	Tagovi
         </span>
     </div>
-	<ul class="tag">
-        <?php
-        $posttags = get_the_tags();
-        if ($posttags) {
-            foreach($posttags as $tag) {
-                echo '<li>';
-                echo '<a href="">';
-                echo $tag->name . ' ';
-                echo '</a>';
-                echo '</li>';
-            }
-        }
-        ?>
-
+	<ul class="categories">
+		<?php
+		$tags = get_tags();
+		foreach ( (array) $tags as $tag ) {
+			echo '<li><a href="' . get_tag_link ($tag->term_id) . '" rel="tag">' . $tag->name . '</a></li>';
+		}
+		?>
+		</li>
 	</ul>
 	<div class="side-gallery">
 		<div class="sectionTitle">

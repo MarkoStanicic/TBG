@@ -91,10 +91,10 @@ get_header(); ?>
 
         <div class="container">
             <div class="col-sm-9">
-                <?php get_template_part('loop', 'culture'); ?>
+	            <?php get_template_part('loop', 'culture'); ?>
             </div>
             <div class="col-sm-3">
-                <?php get_sidebar(); ?>
+	            <?php get_sidebar(); ?>
             </div>
         </div>
 

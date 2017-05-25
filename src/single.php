@@ -58,131 +58,113 @@
 					<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 					<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
 					<!-- /post details -->*/?>
-
-					<div class="single-content">
-						<div class="col-sm-8">
-							<?php the_content(); // Dynamic Content ?>
+					<div class="col-sm-12">
+						<div class="single-content">
+							<div class="col-sm-8">
+								<?php the_content(); // Dynamic Content ?>
+							</div>
 						</div>
-					</div>
 
-					<div class="contact-details">
-						<div class="col-sm-4">
-<!--							<div class="mapa">-->
-<!--								<h3>-->
-<!--									Kontakt-->
-<!--								</h3>-->
-<!---->
-<!--								--><?php
-//
-//								$location = get_field('map');
-//
-//								if( !empty($location) ):
-//									?>
-<!--									<div class="acf-map">-->
-<!--										<a data-fancybox data-src="#hidden-content-1" href="javascript:;">-->
-<!--											<i class="fa fa-search-plus"></i>-->
-<!--											<div class="marker" data-lat="--><?php //echo $location['lat']; ?><!--" data-lng="--><?php //echo $location['lng']; ?><!--"></div>-->
-<!--										</a>-->
-<!--									</div>-->
-<!--								--><?php //endif; ?>
-<!--							</div>-->
-							<div class="widget">
-                                <?php
+						<div class="contact-details">
+							<div class="col-sm-4">
+								<!--							<div class="mapa">-->
+								<!--								<h3>-->
+								<!--									Kontakt-->
+								<!--								</h3>-->
+								<!---->
+								<!--								--><?php
+								//
+								//								$location = get_field('map');
+								//
+								//								if( !empty($location) ):
+								//									?>
+								<!--									<div class="acf-map">-->
+								<!--										<a data-fancybox data-src="#hidden-content-1" href="javascript:;">-->
+								<!--											<i class="fa fa-search-plus"></i>-->
+								<!--											<div class="marker" data-lat="--><?php //echo $location['lat']; ?><!--" data-lng="--><?php //echo $location['lng']; ?><!--"></div>-->
+								<!--										</a>-->
+								<!--									</div>-->
+								<!--								--><?php //endif; ?>
+								<!--							</div>-->
+								<div class="widget">
+									<?php
 
-                                if( have_rows('widget') ):
+									if( have_rows('widget') ):
 
-                                    while( have_rows('widget') ) : the_row();
+										while( have_rows('widget') ) : the_row();
 
-                                        // get layout
-                                        $layout = get_row_layout();
+											// get layout
+											$layout = get_row_layout();
 
 
-                                        // layout_1
-                                        if( $layout === 'postwidget' ) {
+											// layout_1
+											if( $layout === 'postwidget' ) {
 
-                                            $value = get_sub_field('naslov');
-                                            $value1 = get_sub_field('adresa');
-                                            $value2 = get_sub_field('mapa');
+												$value = get_sub_field('naslov');
+												$value1 = get_sub_field('adresa');
 
-                                            // layout_2
-                                        } else {
+												// layout_2
+											} else {
+												echo 'empty';
+											}
+										endwhile;
+									endif;
+									?>
+									<ul>
+										<li><?php echo $value . '' ?></li>
+										<li><?php echo $value1 . '' ?></li>
+									</ul>
 
-                                            echo 'empty';
+									<?php
 
-                                        }
+									$location = get_field('map');
 
-                                    endwhile;
+									if( !empty($location) ):
+										?>
+										<div class="acf-map">
+											<a data-fancybox data-src="#hidden-content-1" href="javascript:;">
+												<i class="fa fa-search-plus"></i>
+												<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+											</a>
+										</div>
+									<?php endif; ?>
+									<div style="display: none;" id="hidden-content-1">
+										<?php
 
-                                endif;
+										$location = get_field('map');
 
-                                ?>
-                                <ul>
-                                    <li><?php echo $value . '' ?></li>
-                                    <li><?php echo $value1 . '' ?></li>
-                                    <li><?php echo $value2 . '' ?></li>
-                                </ul>
+										if( !empty($location) ):
+											?>
+											<div class="acf-map">
+												<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+											</div>
+										<?php endif; ?>
+									</div>
 
-                                <?php
+									<?php
 
-                                $location = get_field('map');
+									if( have_rows('radnovreme') ):
 
-                                if( !empty($location) ):
-                                    ?>
-                                    <div class="acf-map">
-                                        <a data-fancybox data-src="#hidden-content-1" href="javascript:;">
-                                            <i class="fa fa-search-plus"></i>
-                                            <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-                                        </a>
-                                    </div>
-                                <?php endif; ?>
-                                <div style="display: none;" id="hidden-content-1">
-                                    <?php
+										while( have_rows('radnovreme') ) : the_row();
 
-                                    $location = get_field('map');
+											$title = get_sub_field('title');
+											$pon = get_sub_field('ponedeljak');
+											$uto = get_sub_field('utorak');
+											$sre = get_sub_field('sreda');
+											$cet = get_sub_field('cetvrtak');
+											$pet = get_sub_field('petak');
+											$sub = get_sub_field('subota');
+											$ned = get_sub_field('nedelja');
 
-                                    if( !empty($location) ):
-                                        ?>
-                                        <div class="acf-map">
-                                            <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
+										endwhile;
 
-                                <?php
-
-                                if( have_rows('radnovreme') ):
-
-                                    while( have_rows('radnovreme') ) : the_row();
-
-                                        $title = get_sub_field('title');
-                                        $pon = get_sub_field('ponedeljak');
-                                        $uto = get_sub_field('utorak');
-                                        $sre = get_sub_field('sreda');
-                                        $cet = get_sub_field('cetvrtak');
-                                        $pet = get_sub_field('petak');
-                                        $sub = get_sub_field('subota');
-                                        $ned = get_sub_field('nedelja');
-
-                                    endwhile;
-
-                                endif;
-                                ?>
-
-                                <h3>
-                                    <?php echo $title . '' ?>
-                                </h3>
-                                <ul>
-                                    <li>Ponedeljak: <?php echo $pon . '' ?></li>
-                                    <li>Utorak: <?php echo $uto . '' ?></li>
-                                    <li>Sreda: <?php echo $sre . '' ?></li>
-                                    <li>Cetvrtak: <?php echo $cet . '' ?></li>
-                                    <li>Petak: <?php echo $pet . '' ?></li>
-                                    <li>Subota: <?php echo $sub . '' ?></li>
-                                    <li>Nedelja: <?php echo $ned . '' ?></li>
-                                </ul>
+									endif;
+									?>
+								</div>
 							</div>
 						</div>
 					</div>
+
 
 					<div class="clearfix"></div>
 

@@ -118,6 +118,12 @@
         }
     }
     .col-sm-9 {
+        background: #fff;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        border-radius:6px;
+        padding: 0 30px;
+        margin-top: 30px;
         .sectionTitle {
             margin-top: 40px;
             border-top-left-radius: 0;
@@ -133,6 +139,19 @@
                 font-weight: 500;
                 letter-spacing: 0.03em;
             }
+        }
+    }
+    .col-sm-3 {
+        background: #fff;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        border-radius:6px;
+        padding: 0 30px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        .sectionTitle {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
     }
 

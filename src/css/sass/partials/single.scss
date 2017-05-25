@@ -98,7 +98,19 @@
                                 width: 100%;
                         }
                 }
+                .col-sm-12  {
+                    background: #fff;
+                    top: -10px;
+                    padding-top: 20px;
+                    -webkit-border-radius:4px;
+                    -moz-border-radius:4px;
+                    border-radius:4px;
+                    margin-top: -25px;
+                }
                 .single-content {
+                        .col-sm-8 {
+                            background: #fff;
+                        }
                         p {
                                 line-height: 1.6;
                                 font-size: 14px;
@@ -132,6 +144,20 @@
                                         color: $blue;
                                 }
                         }
+                }
+                .contact-details {
+                    .col-sm-4 {
+                        background: #fff;
+                    }
+                    .widget {
+                        background: #fff;
+                        padding: 15px;
+                        border-radius: 4px;
+                        -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+                        -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+                        -ms-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+                        box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);
+                    }
                 }
         }
 }
