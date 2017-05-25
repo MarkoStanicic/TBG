@@ -9,7 +9,7 @@
 					$category = get_the_category();
 					$firstCategory = $category[0]->cat_name;
 				?>
-				<ul class="tbg-breadcrumb">
+				<ul class="tbg-breadcrumb" style="margin-bottom: 30px;">
 					<li>
 						<span class="cat"><?php echo $firstCategory; ?></span>
 						<span class="bred-elem">Home</span>
@@ -27,24 +27,25 @@
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 					<!-- post title -->
-					<h1 class="single-title">
+					<!-- <h1 class="single-title">
 						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					</h1><!-- . / end post title -->
+					</h1>
 
 					<!-- author, date/time, views, comments -->
-					<ul class="post-data">
+					<!-- <ul class="post-data">
 						<li>
 							<span>By <?php the_author_posts_link(); ?></span>
 							<span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
 							<span><i class="fa fa-eye"></i> <?php getPostViews(get_the_ID()); ?></span>
 							<span><i class="fa fa-comment-o"></i> <?php echo comments_number( '0', '1', '%' ); ?></span>
 						</li>
-					</ul><!-- . / end author, date/time, views, comments -->
+					</ul>
 
 					<!-- post thumbnail -->
 					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 						<a class="single-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail(); // Fullsize image for the single post ?>
+							<h1><?php the_title(); ?></h1>
 						</a>
 					<?php endif; ?><!-- . / end post thumbnail -->
 
