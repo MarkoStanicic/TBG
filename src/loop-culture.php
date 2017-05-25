@@ -41,7 +41,7 @@ query_posts( $args );
                             <?php the_post_thumbnail(array(300,150)); // Declare pixel size you need inside the array ?>
                         </a>
                         <span class="thumbCategory">
-                                <?php echo $categoryCategory; ?>
+                                <?php echo get_cat_name(); ?>
                         </span>
                     <?php endif; ?>
                     <!-- /post thumbnail -->

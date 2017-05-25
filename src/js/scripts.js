@@ -5,10 +5,11 @@
 
         //== Flexslider
         $(window).on("load", function (e) {
-            $('#slider-home .flexslider, #slider-category .flexslider').flexslider({
+            $('#pages-slider .flexslider, #slider-home .flexslider, #slider-category .flexslider').flexslider({
                 animation: 'slide',
                 controlNav: false,
                 directionNav: true,
+                smoothHeight: true
             });
             $('#carousel').flexslider({
                 animation: "slide",
@@ -17,6 +18,7 @@
                 slideshow: false,
                 itemWidth: 210,
                 itemMargin: 5,
+                smoothHeight: true,
                 asNavFor: '#slider'
             });
 
@@ -25,6 +27,7 @@
                 controlNav: false,
                 animationLoop: false,
                 slideshow: false,
+                smoothHeight: true,
                 sync: "#carousel"
             });
         });

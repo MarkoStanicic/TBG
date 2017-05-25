@@ -165,6 +165,9 @@
 
         });
 
+        // popup is shown and map is not visible
+        google.maps.event.trigger(map, 'resize');
+
     });
 
 })(jQuery);
