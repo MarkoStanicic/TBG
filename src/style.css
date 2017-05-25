@@ -865,7 +865,8 @@ p {
     margin-top: -175px;
     left: 0;
     height: auto;
-    width: 100%; }
+    width: 100%;
+    transition: all 0.3s ease; }
   .single article .single-img h1 {
     position: absolute;
     bottom: 0;
@@ -880,6 +881,7 @@ p {
     transition: all 0.3s ease; }
   .single article .single-img:hover > h1 {
     height: 0px;
+    padding: 0px;
     transition: all 0.3s ease; }
 
 .single article .col-sm-12 {
@@ -1505,7 +1507,8 @@ p {
     margin-top: -175px;
     left: 0;
     height: auto;
-    width: 100%; }
+    width: 100%;
+    transition: all 0.3s ease; }
   .single article .single-img h1 {
     position: absolute;
     bottom: 0;
@@ -1520,6 +1523,7 @@ p {
     transition: all 0.3s ease; }
   .single article .single-img:hover > h1 {
     height: 0px;
+    padding: 0px;
     transition: all 0.3s ease; }
 
 .single article .col-sm-12 {

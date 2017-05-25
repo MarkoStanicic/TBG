@@ -96,6 +96,7 @@
                                 left: 0;
                                 height: auto;
                                 width: 100%;
+                                transition: all 0.3s ease;
                         }
                         h1 {
                             position: absolute;
@@ -112,6 +113,7 @@
                         }
                         &:hover > h1 {
                             height: 0px;
+                            padding: 0px;
                             transition: all 0.3s ease;
                         }
                 }
