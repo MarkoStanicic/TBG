@@ -43,7 +43,7 @@
 
 					<!-- post thumbnail -->
 					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-						<a class="single-img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+						<a class="single-img" title="<?php the_title_attribute(); ?>">
 							<?php the_post_thumbnail(); // Fullsize image for the single post ?>
 							<h1><?php the_title(); ?></h1>
 						</a>
