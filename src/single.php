@@ -146,7 +146,7 @@
 									if( have_rows('radnovreme') ):
 
 										while( have_rows('radnovreme') ) : the_row();
-
+var_dump(have_rows('radnovreme') ) : the_row());
 											$title = get_sub_field('title');
 											$pon = get_sub_field('ponedeljak');
 											$uto = get_sub_field('utorak');
