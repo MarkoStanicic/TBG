@@ -871,9 +871,12 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
-    background: rgba(72, 176, 237, 0.5);
-    color: #fff; }
+    padding: 30px 20px;
+    background: rgba(72, 136, 237, 0.54);
+    color: #fff;
+    font-size: 41px;
+    font-weight: 500;
+    text-shadow: 2px 2px #000; }
 
 .single article .col-sm-12 {
   background: #fff;
@@ -1504,9 +1507,12 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px;
-    background: rgba(72, 176, 237, 0.5);
-    color: #fff; }
+    padding: 30px 20px;
+    background: rgba(72, 136, 237, 0.54);
+    color: #fff;
+    font-size: 41px;
+    font-weight: 500;
+    text-shadow: 2px 2px #000; }
 
 .single article .col-sm-12 {
   background: #fff;
