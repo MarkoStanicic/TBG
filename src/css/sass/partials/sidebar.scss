@@ -24,6 +24,7 @@
 		}
 	}
 	.categories {
+		margin: 0 0 30px 0;
 		li {
 			a {
 				transition: all 0.2s ease;
@@ -38,6 +39,49 @@
 					transition: all 0.2s ease;
 					color: #111;
 			    }
+			}
+		}
+	}
+	.tags {
+		text-align: left;
+		margin-top: 20px;
+		li {
+			margin: 0 10px 10px 0;
+			display: inline-block;
+			a {
+				border: 1px solid #aaa;
+				border-radius: 25px;
+				line-height: 25px;
+				padding: 0 7px;
+				display: block;
+				text-transform: capitalize;
+				font-size: 12px;
+				transition: all 0.2s ease;
+				&:hover {
+					background: #333946;
+					border-color: #333946;
+					color: #fff;
+					transition: all 0.2s ease;
+				}
+				&.active {
+					background: #47b0ed;
+					border-color: #47b0ed;
+					color: #fff;
+					transition: all 0.2s ease;
+				}
+			}
+		}
+	}
+	.recent_gallery {
+		li {
+			width: 33%;
+			float: left;
+			a {
+				display: block;
+				img {
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 	}

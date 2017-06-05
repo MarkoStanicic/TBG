@@ -1,60 +1,43 @@
 <!-- sidebar -->
 <aside class="sidebar sticky single" role="complementary" style="margin-top: 40px;">
-
-	<?php //get_template_part('searchform'); ?>
-	<?php /*
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-	</div>
-
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
-	</div>
-	*/?>
 	<div class="sectionTitle">
         <span class="title">
         	Kategorije
         </span>
     </div>
-
-	<ul class="categories">
-		<?php $obj_id = get_queried_object_id(); // category ID ?>
-		<?php wp_list_categories(array(
-			'child_of' => $obj_id
-//			/*'hide_empty' => false // use this to show ALL sub-categories, even empty ones; otherwise omit this*/
-		));
-		wp_reset_query();
-		?>
-<!--	--><?php
-/*		$parentscategory = "";
-		foreach((get_the_category()) as $category) {
-			if ($category->category_parent == 0) {
-				$parentscategory .= '<li><a href="' . get_category_link($category->cat_ID) . '" title="' . $category->name . '">' . $category->name . '</a></li>';
-			}
+	<?php
+		//= get post category
+		$postCategory = get_the_category();
+		//= find parent category from $postCategory
+		$parentCategory = $postCategory[0]->cat_ID;
+		//= get sub categories (children of parent category)
+		$subCategories = get_categories('&child_of=' . $parentCategory . '&hide_empty');
+		//= echo result
+		echo '<ul class="categories">';
+		foreach ($subCategories as $subCategory) {
+			echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subCategory->term_id), apply_filters('get_term', $subCategory->name));
 		}
-		echo substr($parentscategory,0,-2);
-	*/?>
-	</ul>
+		echo '</ul>';
+	?>
     <div class="sectionTitle">
         <span class="title">
         	Tagovi
         </span>
     </div>
-	<ul class="categories">
-		<?php
-		$tags = get_tags();
+	<?php
+		$tags = get_tags(); //= get tag list
+		echo '<ul class="tags">';
 		foreach ( (array) $tags as $tag ) {
-			echo '<li><a href="' . get_tag_link ($tag->term_id) . '" rel="tag">' . $tag->name . '</a></li>';
+			echo '<li><a href="' . get_tag_link ($tag->term_id) . '" data-id="' . $tag->term_id . '" rel="tag">' . $tag->name . '</a></li>';
 		}
-		?>
-		</li>
-	</ul>
+		echo '</ul>';
+	?>
 	<div class="side-gallery">
 		<div class="sectionTitle">
 	        <span class="title">
 	            Galerija
 	        </span>
-			<ul>
+			<ul class="recent_gallery">
 				<?php echo instagram($count = 8); ?>
 			</ul>
 		</div>

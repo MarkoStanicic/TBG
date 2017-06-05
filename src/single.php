@@ -4,6 +4,7 @@
 	<!-- section -->
 	<section class="single">
 		<div class="container">
+			<div class="posts"></div>
 			<div class="col-sm-9">
 				<?php
 					$category = get_the_category();
@@ -25,22 +26,6 @@
 				?>
 				<!-- article -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-					<!-- post title -->
-					<!-- <h1 class="single-title">
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					</h1>
-
-					<!-- author, date/time, views, comments -->
-					<!-- <ul class="post-data">
-						<li>
-							<span>By <?php the_author_posts_link(); ?></span>
-							<span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
-							<span><i class="fa fa-eye"></i> <?php getPostViews(get_the_ID()); ?></span>
-							<span><i class="fa fa-comment-o"></i> <?php echo comments_number( '0', '1', '%' ); ?></span>
-						</li>
-					</ul>
-
 					<!-- post thumbnail -->
 					<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 						<a class="single-img" title="<?php the_title_attribute(); ?>">
@@ -48,17 +33,6 @@
 							<h1><?php the_title(); ?></h1>
 						</a>
 					<?php endif; ?><!-- . / end post thumbnail -->
-
-
-					<!-- post details --><?php /*
-					<span class="date">
-						<time datetime="<?php the_time('Y-m-d'); ?> <?php the_time('H:i'); ?>">
-							<?php the_date(); ?> <?php the_time(); ?>
-						</time>
-					</span>
-					<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-					<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-					<!-- /post details -->*/?>
 					<div class="col-sm-12">
 						<div class="single-content">
 							<div class="col-sm-8">
@@ -68,25 +42,6 @@
 
 						<div class="contact-details">
 							<div class="col-sm-4">
-								<!--							<div class="mapa">-->
-								<!--								<h3>-->
-								<!--									Kontakt-->
-								<!--								</h3>-->
-								<!---->
-								<!--								--><?php
-								//
-								//								$location = get_field('map');
-								//
-								//								if( !empty($location) ):
-								//									?>
-								<!--									<div class="acf-map">-->
-								<!--										<a data-fancybox data-src="#hidden-content-1" href="javascript:;">-->
-								<!--											<i class="fa fa-search-plus"></i>-->
-								<!--											<div class="marker" data-lat="--><?php //echo $location['lat']; ?><!--" data-lng="--><?php //echo $location['lng']; ?><!--"></div>-->
-								<!--										</a>-->
-								<!--									</div>-->
-								<!--								--><?php //endif; ?>
-								<!--							</div>-->
 								<div class="widget">
 									<?php
 
@@ -176,17 +131,7 @@
 						</div>
 					</div>
 
-
 					<div class="clearfix"></div>
-
-
-
-
-					<?php /* the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-					<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-					<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p> */?>
 
 					<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
 					<div id="gall">
@@ -215,7 +160,6 @@
 							</div>
 						<?php endif; ?>
 					</div>
-
 
 					<?php comments_template(); ?>
 
