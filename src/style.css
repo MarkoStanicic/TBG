@@ -879,10 +879,6 @@ p {
     font-weight: 500;
     text-shadow: 2px 2px #000;
     transition: all 0.3s ease; }
-  .single article .single-img:hover > h1 {
-    height: 0px;
-    padding: 0px;
-    transition: all 0.3s ease; }
 
 .single article .col-sm-12 {
   background: #fff;
@@ -1520,10 +1516,6 @@ p {
     font-size: 41px;
     font-weight: 500;
     text-shadow: 2px 2px #000;
-    transition: all 0.3s ease; }
-  .single article .single-img:hover > h1 {
-    height: 0px;
-    padding: 0px;
     transition: all 0.3s ease; }
 
 .single article .col-sm-12 {

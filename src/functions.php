@@ -566,40 +566,6 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-/*------------------------------------*\
-    Instagram feed Functions
-\*------------------------------------*/
-
-function instagram($count = 8, $width = 640, $height = 640) {
-
-    $user_id = 4722701623;
-    $access_token = '4722701623.97d1bb3.ebc01675e74642d985e00d85302dad4b';
-    $size = wp_is_mobile() ? 'low_resolution' : 'standard_resolution';
-    $url = 'https://api.instagram.com/v1/users/4722701623/media/recent/?access_token=' . $access_token . '&count=' . $count;
-    $cache_location = './wp-includes' . sha1($url) . '.json';
-    $cache_time = '-0.5 hour';
-
-    if (file_exists($cache_location) && filemtime($cache_location) > strtotime($cache_time)) {
-        // If a cache file exists, and it is newer than 1 hour, use it
-        $jsonData = json_decode(file_get_contents($cache_location));
-        console.log('succes');
-    } else {
-        $jsonData = json_decode((file_get_contents($url)));
-        file_put_contents($cache_location, json_encode($jsonData));
-    }
-
-    foreach ($jsonData->data as $key => $value) {
-        echo '<li class="recentPhotos">';
-        echo '<div class="tumb">';
-        echo '<a data-fancybox="images" data-caption="slike"  href="' . $value->images->$size->url . '" >';
-        echo '<img src="' . $value->images->$size->url . '"/>';
-        echo '</a>';
-        echo '</div>';
-        echo '</li>';
-    }
-
-}
-
 /**
  * AJAC filter posts by taxonomy term
  */
@@ -770,4 +736,86 @@ function my_acf_google_map_api( $api ){
 }
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+/*
+ * Alters event's archive titles
+ */
+function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
+	// Modify the titles here
+	// Some of these include %1$s and %2$s, these will be replaced with relevant dates
+	$title_upcoming =   'Dešavanja'; // List View: Upcoming events
+	$title_past =       'Prethodna dešavanja'; // List view: Past events
+	$title_range =      'Events for %1$s - %2$s'; // List view: range of dates being viewed
+	$title_month =      'Events for %1$s'; // Month View, %1$s = the name of the month
+	$title_day =        'Events for %1$s'; // Day View, %1$s = the day
+	$title_all =        'All events for %s'; // showing all recurrences of an event, %s = event title
+	$title_week =       'Events for week of %s'; // Week view
+	// Don't modify anything below this unless you know what it does
+	global $wp_query;
+	$tribe_ecp = Tribe__Events__Main::instance();
+	$date_format = apply_filters( 'tribe_events_pro_page_title_date_format', tribe_get_date_format( true ) );
+	// Default Title
+	$title = $title_upcoming;
+	// If there's a date selected in the tribe bar, show the date range of the currently showing events
+	if ( isset( $_REQUEST['tribe-bar-date'] ) && $wp_query->have_posts() ) {
+		if ( $wp_query->get( 'paged' ) > 1 ) {
+			// if we're on page 1, show the selected tribe-bar-date as the first date in the range
+			$first_event_date = tribe_get_start_date( $wp_query->posts[0], false );
+		} else {
+			//otherwise show the start date of the first event in the results
+			$first_event_date = tribe_event_format_date( $_REQUEST['tribe-bar-date'], false );
+		}
+		$last_event_date = tribe_get_end_date( $wp_query->posts[ count( $wp_query->posts ) - 1 ], false );
+		$title = sprintf( $title_range, $first_event_date, $last_event_date );
+	} elseif ( tribe_is_past() ) {
+		$title = $title_past;
+	}
+	// Month view title
+	if ( tribe_is_month() ) {
+		$title = sprintf(
+			$title_month,
+			date_i18n( tribe_get_option( 'monthAndYearFormat', 'F Y' ), strtotime( tribe_get_month_view_date() ) )
+		);
+	}
+	// Day view title
+	if ( tribe_is_day() ) {
+		$title = sprintf(
+			$title_day,
+			date_i18n( tribe_get_date_format( true ), strtotime( $wp_query->get( 'start_date' ) ) )
+		);
+	}
+	// All recurrences of an event
+	if ( function_exists('tribe_is_showing_all') && tribe_is_showing_all() ) {
+		$title = sprintf( $title_all, get_the_title() );
+	}
+	// Week view title
+	if ( function_exists('tribe_is_week') && tribe_is_week() ) {
+		$title = sprintf(
+			$title_week,
+			date_i18n( $date_format, strtotime( tribe_get_first_week_day( $wp_query->get( 'start_date' ) ) ) )
+		);
+	}
+	if ( is_tax( $tribe_ecp->get_event_taxonomy() ) && $depth ) {
+		$cat = get_queried_object();
+		$title = '<a href="' . esc_url( tribe_get_events_link() ) . '">' . $title . '</a>';
+		$title .= ' &#8250; ' . $cat->name;
+	}
+	return $title;
+}
+add_filter( 'tribe_get_events_title', 'tribe_alter_event_archive_titles', 11, 2 );
+
+add_action( 'tribe_events_after_loop', 'add_past_events' );
+
+function add_past_events() {
+	if ( ! tribe_is_list_view() || ! tribe_is_upcoming() ) return;
+	remove_action( 'tribe_events_after_loop', 'add_past_events' );
+
+	$past_events = tribe_get_events( array(
+		'eventDisplay' => 'past'
+	) );
+
+	foreach ( $past_events as $event )
+		echo "$event->post_title - $event->EventStartDate <br/>";
+}
+
 

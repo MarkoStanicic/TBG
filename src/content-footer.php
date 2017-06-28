@@ -171,7 +171,9 @@
                         </div>
                     </div>
                     <ul>
-                        <?php echo instagram($count = 8); ?>
+	                    <?php
+	                    echo do_shortcode( '[instagram-feed]' );
+	                    ?>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

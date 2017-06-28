@@ -11,6 +11,11 @@
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
 	</div>
 	*/?>
+    <div class="calendar">
+	    <?php
+	        echo do_shortcode( '[tribe_mini_calendar]' );
+	    ?>
+    </div>
 	<div class="sectionTitle">
         <span class="title">
         	Kategorije
