@@ -34,7 +34,7 @@ function wpb_track_post_views ($post_id) {
     if ( !is_single() ) return;
     if ( empty ( $post_id) ) {
         global $post;
-        $post_id = $post->ID;    
+        $post_id = $post->ID;
     }
     wpb_set_post_views($post_id);
 }
@@ -84,7 +84,7 @@ function tbg_recent_comments($no_comments = 5, $comment_len = 80, $avatar_size =
     endforeach; else :
         $comm .= 'nema Komentara!';
     endif;
-    echo $comm; 
+    echo $comm;
 }
 
 // Remove issues with prefetching adding extra views
@@ -314,7 +314,7 @@ if (function_exists('register_sidebar'))
 function my_remove_recent_comments_style()
 {
     global $wp_widget_factory;
-    
+
     if (isset($wp_widget_factory->widgets['WP_Widget_Recent_Comments'])) {
         remove_action('wp_head', array(
             $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],

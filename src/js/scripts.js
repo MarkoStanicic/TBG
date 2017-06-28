@@ -2,7 +2,63 @@
     'use strict';
 
     $(function () {
+        //================
+        //= create array fom tag id's
+        var tagArray = [];
+        $('.tags li a').on('click', function(e) {
+            //= clicked anchors will not take the browser to a new URL
+            e.preventDefault();
+            //= get $(this) element tag id || we will use this later for url updating
+            var tagId = $(this).attr('data-id');
 
+            if($(this).hasClass('active')) {
+                //= remove active class
+                $(this).removeClass('active');
+                //= remove tag id from array
+                tagArray = tagArray.filter(function(item) {
+                    return item !== tagId;
+                });
+                console.log('tagArray removed: ', tagArray);
+                //= create url
+                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '';
+            } else {
+                //= add active class
+                $(this).addClass('active');
+                //= push tag id to tag array
+                tagArray.push(tagId);
+                console.log('tagArray: ', tagArray);
+                //= create url
+                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '';
+            }
+            //= get element with post content
+            var postContentElement = $( '.single .col-sm-9' );
+            //= get json data from APU URI. 10 posts will be returned by default.
+            if(tagArray.length > 0) {
+                //= set loader to postContentElement before it gets data
+                postContentElement.html( '<p>⌛️ Loading...</p>' );
+                $.getJSON( '' + url + '', function( data ) {
+                    console.log('url: ', url);
+                	//= empty the postContentElement
+                	postContentElement.empty();
+                	//= loop through each post
+                	console.log('data: ', data.length)
+                	$.each( data, function( i, post ){
+                		// console.log( post );
+                		var link = post.link,                     //= get post link
+                		    title = post.title.rendered,          //= get post title
+                		    excerpt = post.excerpt.rendered,      //= get post excerpt
+                		    content = post.content.rendered;      //= get post content
+
+                        //= append data ftom each loop to postContentElement
+                		postContentElement.append('<div><a href=' + link + ' target="_blank">&mdash; ' + title + '</a>' + excerpt + '</div>' );
+                	});
+                });
+            } else {
+                //= set no post element to postContentElement
+                postContentElement.html( '<p>Nema postova za odabran filter</p>' );
+            }
+        });
+        //================
         //== Flexslider
         $(window).on("load", function (e) {
             $('#pages-slider .flexslider, #slider-home .flexslider, #slider-category .flexslider').flexslider({
@@ -70,7 +126,7 @@
             });
         } else {
             imgWrapper.css({
-                'background-image': 'url(http://localhost/welovebelgrade/wp-content/themes/TBG/src/img/header/belgrade-4.jpg)'
+                // 'background-image': 'url("<?php echo get_template_directory_uri();?>/img/header/belgrade-4.jpg")'
             });
         }
 
@@ -89,9 +145,9 @@
             $('.sidebar .toggle#, .footerWidget .toggle#' + id[1]).removeClass('hide');
         });
 
-        $("[data-fancybox]").fancybox({
-            // Options will go here
-        });
+        // $("[data-fancybox]").fancybox({
+        //     // Options will go here
+        // });
 
         $(".acf-map").on('click', function() {
 
