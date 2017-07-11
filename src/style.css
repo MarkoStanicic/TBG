@@ -1308,20 +1308,16 @@ p {
     text-transform: uppercase;
     font-size: 11px; }
 
-.gallery-foot ul li {
-  float: left; }
-  .gallery-foot ul li a img {
-    width: 80px;
-    height: 80px;
-    margin: 4px;
-    /* Safari */
-    transition: 0.5s; }
-    .gallery-foot ul li a img:hover {
-      /* Safari and Chrome */
-      /* Firefox */
-      /* IE 9 */
-      /* Opera */
-      transform: scale(1.1); }
+.gallery-foot #sb_instagram .sbi_photo img {
+  /* Safari */
+  transition: 0.5s; }
+
+.gallery-foot #sb_instagram .sbi_photo img:hover {
+  /* Safari and Chrome */
+  /* Firefox */
+  /* IE 9 */
+  /* Opera */
+  transform: scale(1.1); }
 
 .social-footer ul li {
   float: left; }

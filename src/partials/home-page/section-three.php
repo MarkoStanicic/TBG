@@ -3,6 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 column">
+                <div class="calendar">
+	                <?php echo do_shortcode( '[tribe_mini_calendar]' ); ?>
+                </div>
                 <div class="sectionTitle">
                     <span class="title">
                         Poslednji Postovi

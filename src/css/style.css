@@ -1321,25 +1321,21 @@ p {
     text-transform: uppercase;
     font-size: 11px; }
 
-.gallery-foot ul li {
-  float: left; }
-  .gallery-foot ul li a img {
-    width: 80px;
-    height: 80px;
-    margin: 4px;
-    -webkit-transition: 0.5s;
-    /* Safari */
-    transition: 0.5s; }
-    .gallery-foot ul li a img:hover {
-      -webkit-transform: scale(1.1);
-      /* Safari and Chrome */
-      -moz-transform: scale(1.1);
-      /* Firefox */
-      -ms-transform: scale(1.1);
-      /* IE 9 */
-      -o-transform: scale(1.1);
-      /* Opera */
-      transform: scale(1.1); }
+.gallery-foot #sb_instagram .sbi_photo img {
+  -webkit-transition: 0.5s;
+  /* Safari */
+  transition: 0.5s; }
+
+.gallery-foot #sb_instagram .sbi_photo img:hover {
+  -webkit-transform: scale(1.1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.1);
+  /* Firefox */
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -o-transform: scale(1.1);
+  /* Opera */
+  transform: scale(1.1); }
 
 .social-footer ul li {
   float: left; }
