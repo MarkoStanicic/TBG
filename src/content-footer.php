@@ -202,6 +202,9 @@
                             </a>
                         </li>
                     </ul>
+                    <div class="clearfix"></div>
+                    <div class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                    </div>
                 </div>
             </div>
         </div>
