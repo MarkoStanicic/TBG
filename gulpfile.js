@@ -33,6 +33,8 @@ var gulp = require( "gulp" ),
 			"src/css/banner.css",
 			/** Normalize */
 			"src/bower_components/normalize.css/normalize.css",
+            /** bootstrap */
+            "src/bower_components/bootstrap/dist/css/bootstrap.css",
 			/** Theme style */
 			"src/css/style.css"
 		]
