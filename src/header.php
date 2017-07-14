@@ -98,13 +98,13 @@
 
 							<?php html5blank_nav(); ?>
 
-							<ul class="search">
-								<a href="javascript:void(0)">
-									<span class="fa fa-search"></span>
-								</a>
-								<input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="<?php _e( 'Pretraga', 'html5blank' ); ?>">
-								<button class="search-submit" type="submit"><?php _e( 'Search', 'html5blank' ); ?></button>
-							</ul>
+<!--							<ul class="search">-->
+<!--								<a href="javascript:void(0)">-->
+<!--									<span class="fa fa-search"></span>-->
+<!--								</a>-->
+<!--								<input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="--><?php //_e( 'Pretraga', 'html5blank' ); ?><!--">-->
+<!--								<button class="search-submit" type="submit">--><?php //_e( 'Search', 'html5blank' ); ?><!--</button>-->
+<!--							</ul>-->
 						</div>
 					</nav>
 					<!-- /nav -->

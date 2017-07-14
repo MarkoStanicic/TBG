@@ -201,10 +201,11 @@
                                 <span class="fa fa-pinterest"></span>
                             </a>
                         </li>
+                        <li>
+                            <div class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+                            </div>
+                        </li>
                     </ul>
-                    <div class="clearfix"></div>
-                    <div class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
-                    </div>
                 </div>
             </div>
         </div>
