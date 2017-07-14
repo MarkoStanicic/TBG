@@ -745,11 +745,11 @@ function tribe_alter_event_archive_titles ( $original_recipe_title, $depth ) {
 	// Some of these include %1$s and %2$s, these will be replaced with relevant dates
 	$title_upcoming =   'Dešavanja'; // List View: Upcoming events
 	$title_past =       'Prethodna dešavanja'; // List view: Past events
-	$title_range =      'Events for %1$s - %2$s'; // List view: range of dates being viewed
-	$title_month =      'Events for %1$s'; // Month View, %1$s = the name of the month
-	$title_day =        'Events for %1$s'; // Day View, %1$s = the day
-	$title_all =        'All events for %s'; // showing all recurrences of an event, %s = event title
-	$title_week =       'Events for week of %s'; // Week view
+	$title_range =      'Dešavanja za %1$s - %2$s'; // List view: range of dates being viewed
+	$title_month =      'Dešavanja za %1$s'; // Month View, %1$s = the name of the month
+	$title_day =        'Dešavanja za %1$s'; // Day View, %1$s = the day
+	$title_all =        'Sva dešavanja za %s'; // showing all recurrences of an event, %s = event title
+	$title_week =       'Dešavanja za nedelju %s'; // Week view
 	// Don't modify anything below this unless you know what it does
 	global $wp_query;
 	$tribe_ecp = Tribe__Events__Main::instance();

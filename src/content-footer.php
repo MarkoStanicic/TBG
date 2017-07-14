@@ -197,12 +197,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span class="fa fa-pinterest"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true">
+                            <div  data-width="200px" class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true">
                             </div>
                         </li>
                     </ul>
