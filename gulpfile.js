@@ -14,7 +14,7 @@ var gulp = require( "gulp" ),
 		/** jQuery */
 		"src/bower_components/jquery/dist/jquery.js",
 		/** bootstrap */
-		"src/bower_components/bootstrap/dist/bootstrap.js",
+		"src/bower_components/bootstrap/dist/js/bootstrap.js",
 		/** Page scripts */
 		"src/js/scripts.js"
 	],
@@ -23,6 +23,8 @@ var gulp = require( "gulp" ),
 		development: [
 			/** The banner of `style.css` */
 			"src/css/banner.css",
+            /** bootstrap */
+            "src/bower_components/bootstrap/dist/css/bootstrap.css",
 			/** Theme style */
 			"src/css/style.css"
 		],

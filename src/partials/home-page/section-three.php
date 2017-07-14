@@ -75,7 +75,10 @@
             </div>
             <div class="col-sm-4 column sidebar">
                 <div class="calendar">
-		            <?php echo do_shortcode( '[tribe_mini_calendar]' ); ?>
+		            <?php echo do_shortcode( '[tribe_mini_calendar after_widget="true"]' ); ?>
+                </div>
+                <div class="calendar">
+		            <?php echo do_shortcode( '[tribe_events_list]' ); ?>
                 </div>
                 <div class="sidebarWidgetNews">
                     <div class="sectionTitle">

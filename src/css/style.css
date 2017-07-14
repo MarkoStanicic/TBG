@@ -170,6 +170,9 @@ a, a:hover, a:focus {
   outline: none;
   text-decoration: none; }
 
+b, strong {
+  font-weight: bold; }
+
 p {
   margin: 0 0 15px; }
 
