@@ -202,7 +202,7 @@
                             </a>
                         </li>
                         <li>
-                            <div class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true">
+                            <div class="fb-like" data-href="https://www.facebook.com/thebelgradeguide/?ref=br_rs" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true">
                             </div>
                         </li>
                     </ul>
