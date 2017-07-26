@@ -1,37 +1,19 @@
 <!-- sidebar -->
 <aside class="sidebar sticky single" role="complementary">
-
-	<?php //get_template_part('searchform'); ?>
-	<?php /*
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-	</div>
-
-	<div class="sidebar-widget">
-		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-2')) ?>
-	</div>
-	*/?>
-    <!--<div class="calendar">
-	    <?php
-/*	        echo do_shortcode( '[tribe_mini_calendar]' );
-	    */?>
-    </div>-->
 	<div class="sectionTitle">
         <span class="title">
         	Kategorije
         </span>
     </div>
 	<?php
-		//= get post category
-		$postCategory = get_the_category();
-		//= find parent category from $postCategory
-		$parentCategory = $postCategory[0]->cat_ID;
-		//= get sub categories (children of parent category)
-		$subCategories = get_categories('&child_of=' . $parentCategory . '&hide_empty');
-		//= echo result
+		$args = array(
+			'child_of' => $cat
+		);
+		$categories = get_categories( $args );
 		echo '<ul class="categories">';
-		foreach ($subCategories as $subCategory) {
-			echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subCategory->term_id), apply_filters('get_term', $subCategory->name));
+		foreach($categories as $category) {
+	    	echo '<li><a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $category->name ) . '" ' . '>' . $category->name.'</a></li>';
+
 		}
 		echo '</ul>';
 	?>
@@ -44,7 +26,9 @@
 		$tags = get_tags(); //= get tag list
 		echo '<ul class="tags">';
 		foreach ( (array) $tags as $tag ) {
-			echo '<li><a href="' . get_tag_link ($tag->term_id) . '" data-id="' . $tag->term_id . '" rel="tag">' . $tag->name . '</a></li>';
+			echo '<li>';
+				echo '<a href="' . get_tag_link ($tag->term_id) . '" data-id="' . $tag->term_id . '" rel="tag">' . $tag->name . '</a>';
+			echo '</li>';
 		}
 		echo '</ul>';
 	?>
@@ -60,5 +44,4 @@
 			</ul>
 		</div>
 	</div>
-</aside>
-<!-- /sidebar -->
+</aside><!-- . / end sidebar -->
