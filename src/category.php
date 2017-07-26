@@ -11,7 +11,7 @@
 			<div id="slider-category">
 				<div class="flexslider">
 					<ul class="col-md-12 slides">
-						<?php
+						<?php/*
 						//== get meta data for category
 						// $key = the_field('slider_first_section');
 						// $slideKey = "Number of Slides in First Section";
@@ -62,7 +62,7 @@
 							</li>
 							<?php
 						endwhile;
-						wp_reset_query();
+						wp_reset_query();*/
 						?>
 					</ul>
 				</div>
