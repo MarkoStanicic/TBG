@@ -40,32 +40,6 @@
                             </p>
                             <button href="<?php get_permalink(); ?>">READ MORE</button>
                         </div>
-                        <!--<header>
-                            <span class="getAuthor">
-                                <?php
-/*                                echo 'By ';
-                                echo the_author_posts_link();
-                                */?>
-                            </span>
-                            <span class="postTime">
-                                <?php
-/*                                echo ' / <i class="fa fa-clock-o"></i> ';
-                                echo get_post_time('F d, Y.');
-                                */?>
-                            </span>
-                            <span class="postViews">
-                                <?php
-/*                                echo ' / <i class="fa fa-eye"></i> ';
-                                echo getPostViews(get_the_ID());
-                                */?>
-                            </span>
-                            <span class="commentNum">
-                                <?php
-/*                                echo ' / <i class="fa fa-comment-o"></i> ';
-                                echo comments_number( '0', '1', '%' );
-                                */?>
-                            </span>
-                        </header>-->
                     </div>
                 </div>
                 <?php
@@ -75,11 +49,15 @@
             </div>
             <div class="col-sm-4 column sidebar">
                 <div class="calendar">
-		            <?php echo do_shortcode( '[tribe_mini_calendar after_widget="true"]' ); ?>
+<!--		            --><?php //echo do_shortcode( '[tribe_mini_calendar after_widget="true"]' ); ?>
+
+                    <div class="sidebar-widget">
+                        <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+                    </div>
                 </div>
-                <div class="calendar">
-		            <?php echo do_shortcode( '[tribe_events_list]' ); ?>
-                </div>
+<!--                <div class="calendar">-->
+<!--		            --><?php //echo do_shortcode( '[tribe_events_list]' ); ?>
+<!--                </div>-->
                 <div class="sidebarWidgetNews">
                     <div class="sectionTitle">
                         <ul>
