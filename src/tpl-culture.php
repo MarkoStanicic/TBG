@@ -20,7 +20,7 @@ get_header(); ?>
         $args = array(
             'cat' => 5,
             'posts_per_page' => 5,
-            'include'  => array( 5, 21, 22, 23 ),
+            'include'  => array( 'child_of' => 5 ),
 //            'cat_name'  => array( 5, 21, 22, 23 ),
             'paged' => $paged
         );

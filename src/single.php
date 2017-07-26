@@ -78,25 +78,13 @@
 									if( !empty($location) ):
 										?>
 										<div class="acf-map">
-											<a data-fancybox data-src="#hidden-content-1" href="javascript:;">
+											<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+											<!--<a data-fancybox data-src="#hidden-content-1" href="javascript:;">
 												<i class="fa fa-search-plus"></i>
 												<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-											</a>
+											</a>-->
 										</div>
-									<?php endif; ?>
-									<div style="display: none;" id="hidden-content-1">
-										<?php
-
-										$location = get_field('map');
-
-										if( !empty($location) ):
-											?>
-											<div class="acf-map">
-												<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-											</div>
-										<?php endif; ?>
-									</div>
-
+									<?php endif; ?>	
 									<?php
 
 									if( have_rows('radnovreme') ):
