@@ -1,5 +1,5 @@
 <!-- sidebar -->
-<aside class="sidebar sticky single" role="complementary" style="margin-top: 40px;">
+<aside class="sidebar sticky single" role="complementary">
 
 	<?php //get_template_part('searchform'); ?>
 	<?php /*

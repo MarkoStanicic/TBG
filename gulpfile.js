@@ -157,6 +157,7 @@ gulp.task( "watch", [ "template", "styles" ], function() {
 	/** Watch for autoprefix */
 	gulp.watch( [
 		"src/css/*.css",
+		"src/*.scss",
 		"src/css/sass/**/*.scss"
 	], [ "styles" ] );
 

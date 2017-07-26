@@ -12,6 +12,10 @@
     .img-center {
         position: relative;
         top: 60px;
+        img {
+            width: 100%;
+            
+        }
     }
     .wrap-text {
         position: absolute;
@@ -57,7 +61,7 @@
                 line-height: 45px;
                 -webkit-transition: 1s; /* Safari */
                 transition: 1s;
-                
+
                 &:hover {
                     color: $white-color;
                     background: $blue-darker;

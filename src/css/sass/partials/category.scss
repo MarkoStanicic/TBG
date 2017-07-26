@@ -1,8 +1,10 @@
 .category {
+    .sectionTitle {
+        margin-left: 0;
+    }
     .single-cnt {
         margin-top: 40px;
     }
-
     .flexslider {
         height: 450px;
         .flex-viewport {
@@ -118,14 +120,16 @@
         }
     }
     .col-sm-9 {
-        background: #fff;
-        -webkit-border-radius:6px;
-        -moz-border-radius:6px;
-        border-radius:6px;
-        padding: 0 30px;
         margin-top: 30px;
+        .col-md-12 {
+            background: #fff;
+            -webkit-border-radius: 6px;
+               -moz-border-radius: 6px;
+                    border-radius: 6px;
+        }
         .sectionTitle {
-            margin-top: 40px;
+            width: 100%;
+            margin-top: 30px;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
             .title {
@@ -143,21 +147,20 @@
     }
     .col-sm-3 {
         background: #fff;
-        -webkit-border-radius:6px;
-        -moz-border-radius:6px;
-        border-radius:6px;
-        padding: 0 30px;
         margin-top: 30px;
         padding-bottom: 30px;
+        -webkit-border-radius: 6px;
+           -moz-border-radius:6px;
+                border-radius: 6px;
         .sectionTitle {
             border-top-left-radius: 0;
             border-top-right-radius: 0;
+            margin-top: 30px;
         }
     }
 
     .tbg-breadcrumb {
-        margin: -15px;
-        margin-bottom: 20px;
+        margin: -15px 0 20px 0;
         span {
             display: inline-block;
             margin: 0 3px;
@@ -192,19 +195,12 @@
         }
     }
     article {
+        overflow: hidden;
         .col-sm-12 {
-            :first-child .borderLine {
-                display: none;
-            }
             .borderLine {
                 margin-top: 30px;
                 border-top: 1px solid #ddd;
                 padding-top: 30px;
-                :first-child  {
-                    margin-top: 0;
-                    padding-top: 0;
-                    border-top: none;
-                }
             }
         }
         .title {
@@ -251,6 +247,7 @@
             }
         }
         .col-sm-4 {
+            padding-left: 0;
             .thumbCategory {
                 position: absolute;
                 top: 20px;
@@ -310,29 +307,6 @@
     }
     .text-center {
         text-align: center;
-        .pagination {
-            margin-top: 44px;
-            text-align: center;
-            clear: both;
-            .page-numbers {
-                display: inline-block;
-                text-align: center;
-                width: 40px;
-                height: 35px;
-                line-height: 30px;
-                border: 2px solid #47b0ed;
-                margin-right: 10px;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                font-weight: 400;
-                color: #47b0ed;
-            }
-            .current {
-                background-color: #47b0ed;
-                color: #fff;
-            }
-        }
-
     }
 
 }

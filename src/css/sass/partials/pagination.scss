@@ -1,0 +1,37 @@
+/**
+ * partials/pagination
+ * ---
+ */
+
+.pagination {
+    text-align: center;
+    clear: both;
+    .page-numbers {
+        display: inline-block;
+        float: left;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        line-height: 38px;
+        border: 1px solid #47b0ed;
+        border-right: none;
+        font-weight: 400;
+        color: #47b0ed;
+        &:first-child {
+            border-radius: 3px 0 0 3px;
+        }
+        &:last-child {
+            border-radius: 0 3px 3px 0;
+            border-right: 1px solid #47b0ed;
+        }
+        &:hover {
+            background: #47b0ed;
+            color: #fff;
+            opacity: 0.7;
+        }
+    }
+    .current {
+        background-color: #47b0ed;
+        color: #fff;
+    }
+}

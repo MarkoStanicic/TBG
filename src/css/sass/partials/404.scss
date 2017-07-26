@@ -4,14 +4,16 @@
  */
 
 #post-404 {
-    /*background-image: url(http://localhost/welovebelgrade/wp-content/themes/TBG/src/img/torn-paper.png);
-    background-repeat: no-repeat;*/
     text-align: center;
     position: relative;
-    margin-bottom: 80px;
+    background: #fff;
+
     .img-center {
         position: relative;
         top: 60px;
+        img {
+            width: 100%;
+        }
     }
     .wrap-text {
         position: absolute;
@@ -35,48 +37,56 @@
         font-size: 22px;
         color: $grey-lighter;
     }
-    ul {
+    .search {
         display: inline-block;
+        label {
+            float: left;
+        }
         input {
-            display: block;
+            display: inline-block;
             width: 300px;
             height: 40px;
-            float: left;
-            font-size: 18px;
+            outline: none;
+            font-size: 16px;
             padding-left: 10px;
+            border: none;
+            border-radius: 3px 0 0 3px;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            vertical-align: middle;
         }
-        a {
-            display: block;
-            float: left;
+        button {
+            display: inline-block;
+            text-decoration: none;
+            outline: none;
+            height: 40px;
+            line-height: 40px;
+            width: 50px;
+            background: $white-color;
+            border-radius: 0 3px 3px 0;
+            transition: all 0.2s ease;
+            color: $blue-light;
+            border: none;
+            margin: 0 0 0 -4px;
+            border-left: 1px solid $blue-darker;
+            vertical-align: middle;
+            &:hover {
+                color: $white-color;
+                background: $blue-darker;
+                transition: all 0.2s ease;
+            }
             span {
-                color: $blue-light;
-                background: $white-color;
-                font-size: 26px;
-                width: 46px;
-                height: 46px;
-                line-height: 45px;
-                -webkit-transition: 1s; /* Safari */
-                transition: 1s;
-                
-                &:hover {
-                    color: $white-color;
-                    background: $blue-darker;
-                    transition-delay: ease-in;
-                    -webkit-webkit-transition-timing-function: ease-in;
-                    -moz-webkit-transition-timing-function: ease-in;
-                    -ms-webkit-transition-timing-function: ease-in;
-                    -o-webkit-transition-timing-function: ease-in;
-                    webkit-transition-timing-function: ease-in;
-                }
+                font-size: 22px;
             }
         }
     }
     h3 {
         color: $white-color;
         i {
-            font-size: 30px;
-            vertical-align: middle;
+            font-size: 20px;
+            vertical-align: bottom;
             color: $white-color;
+            margin-right: 5px;
         }
         a {
             color: $white-color;

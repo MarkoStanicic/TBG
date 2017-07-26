@@ -60,7 +60,7 @@
         });
         //================
         //== Flexslider
-        $(window).on("load", function (e) {
+        $(window).on('load', function (e) {
             $('#pages-slider .flexslider, #slider-home .flexslider, #slider-category .flexslider').flexslider({
                 animation: 'slide',
                 controlNav: false,

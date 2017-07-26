@@ -16,12 +16,19 @@
 						<p>
 							Možda pretragom stignete do željene strane
 						</p>
-						<ul class="search">
-							<input class="search-input" type="search" name="s" aria-label="Search site for:" placeholder="<?php _e( 'Pretraga', 'html5blank' ); ?>">
-							<a href="javascript:void(0)">
-								<span class="fa fa-search"></span>
-							</a>
-						</ul>
+						<div class="search">
+							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+								<label>
+								    <input type="search" class="search-field"
+								        placeholder="<?php echo esc_attr_x( 'Pretraga …', 'placeholder' ) ?>"
+								        value="<?php echo get_search_query() ?>" name="s"
+								        title="<?php echo esc_attr_x( 'Pretraga:', 'label' ) ?>" />
+								</label>
+								<button type="submit" class="search-submit">
+									<span class="fa fa-search"></span>
+								</input>
+							</form>
+						</div>
 						<h3 class="pY20">
 							<i class="fa fa-home" aria-hidden="true"></i>
 							<a href="<?php echo home_url(); ?>">Vratite se na našu početnu stranu!!!</a>
