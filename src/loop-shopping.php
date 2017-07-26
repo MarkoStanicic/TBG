@@ -2,9 +2,9 @@
 
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
-    'cat' => 5,
+    'cat' => 6,
     'posts_per_page' => 5,
-    'include'  => array( 'child_of' => 5 ),
+    'include'  => array( 'child_of' => 6 ),
     'paged' => $paged
 );
 // The Query
@@ -14,7 +14,7 @@ query_posts( $args );
 <!-- Section Title -->
 <div class="sectionTitle">
             <span class="title">
-                <?php echo get_cat_name(5);?>
+                <?php echo get_cat_name(6);?>
             </span>
 </div>
 <!-- /Section Title -->
@@ -22,14 +22,14 @@ query_posts( $args );
 <ul class="tbg-breadcrumb">
     <li>
         <span class="bred-elem">Home</span>
-        <span class="bred-elem">Kategorija: "<?php echo get_cat_name(5);?>" </span>
+        <span class="bred-elem">Kategorija: "<?php echo get_cat_name(6);?>" </span>
     </li>
 </ul>
 <!-- /Breadcrumbs -->
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
     <div class="col-sm-12">
             <!-- article -->
-            <article id="post-<?php the_ID(5); ?>" <?php post_class(); ?>>
+            <article id="post-<?php the_ID(6); ?>" <?php post_class(); ?>>
                 <div class="col-sm-12">
                     <div class="borderLine">
                     </div>
