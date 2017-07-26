@@ -70,7 +70,20 @@
             <!-- /Slider -->
 			<div class="container">
                 <div class="col-sm-9">
-	                <?php get_template_part('loop', 'category'); ?>
+					<main role="main" aria-label="Content">
+		<!-- section -->
+		<section>
+
+			<h1><?php _e( 'Category: ', 'html5blank' ); single_cat_title(); ?></h1>
+
+			<?php get_template_part('loop'); ?>
+
+			<?php get_template_part('pagination'); ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
                 </div>
                 <div class="col-sm-3">
                     <?php get_sidebar(); ?>
