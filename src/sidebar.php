@@ -37,11 +37,11 @@
 	        <span class="title">
 	            Galerija
 	        </span>
-			<ul class="recent_gallery">
-				<?php
-				    echo do_shortcode( '[instagram-feed]' );
-				?>
-			</ul>
 		</div>
+		<ul class="recent_gallery">
+			<?php
+			    echo do_shortcode( '[instagram-feed]' );
+			?>
+		</ul>
 	</div>
 </aside><!-- . / end sidebar -->

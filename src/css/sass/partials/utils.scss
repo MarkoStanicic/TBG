@@ -19,7 +19,24 @@ body {
 	background: #f2f2f2;
 	overflow-x: hidden;
 }
-
+//== instagram
+._51m-._2pir._51mw {
+	display: block!important;
+	color: #fff!important;
+	margin: 5px 0 0 5px!important;
+}
+._51m-._2pic._51mw {
+	display: none!important;
+}
+._2tga._49ve {
+    border-radius: 6px!important;
+    font-size: 11px!important;
+    height: 38px!important;
+    padding: 0!important;
+    width: 60px!important;
+    border: none!important;
+    margin-right: 6px!important;
+}
 //== Links
 //
 a, a:hover, a:focus {
@@ -245,7 +262,7 @@ p {
 		&:first-child {
 			padding-left: 0;
 			.thumbCategory {
-				left: 0px;				
+				left: 0px;
 			}
 		}
 		&:last-child {
@@ -295,13 +312,13 @@ p {
 		font-weight: 500;
 		text-transform: capitalize;
 		margin-bottom: 15px;
-		height: 50px;		
+		height: 50px;
 	}
 	.getAuthor {
 		color: #aaa;
     	font-size: 11px;
 		span {
-			color: #47b0ed;			
+			color: #47b0ed;
 		}
 	}
 	.postTime {
@@ -498,7 +515,7 @@ p {
 			}
 		}
 	}
-	 
+
 }
 //== Sidebar
 
@@ -635,4 +652,3 @@ p {
     opacity: 1;
     transform: translateY(0);
 }
-
