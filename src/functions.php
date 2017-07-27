@@ -737,6 +737,8 @@ function my_acf_google_map_api( $api ){
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
+add_action('acf/input/admin_footer', 'autocomplete_map_init');
+
 /*
  * Alters event's archive titles
  */
@@ -817,3 +819,5 @@ function add_past_events() {
 	foreach ( $past_events as $event )
 		echo "$event->post_title - $event->EventStartDate <br/>";
 }
+
+
