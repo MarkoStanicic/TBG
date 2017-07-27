@@ -49,8 +49,17 @@
                 		var link = post.link,                     //= get post link
                 		    title = post.title.rendered,          //= get post title
                 		    excerpt = post.excerpt.rendered,      //= get post excerpt
-                		    content = post.content.rendered;      //= get post content
+                            content = post.content.rendered,      //= get post content
+                		    author = post.author,      //= get post content
+                            date = post.date;
 
+                        //= define date
+                        var d = new Date(date);
+                        var curr_date = d.getDate();
+                        var curr_month = d.getMonth();
+                        var curr_year = d.getFullYear();
+                        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                        var postDate = monthNames[curr_month] + ' ' + curr_date + ", " + curr_year + '.';
                         //= append data ftom each loop to postContentElement
                         var temp = '';
                             temp += '<article>';
@@ -59,45 +68,33 @@
                                         temp += '<div class="col-sm-4">';
                                             temp += '<a class="img" href="' + link + '">';
                                                 // temp += '<img src="http://localhost:8888/Test/TBG/wp-json/wp/v2/media/' + post.featured_media + '" />'
-                                                temp +=  title + ' ' + post.featured_media + ' ' + post.featured_media.source_url;
+                                                temp +=  title;
                                             temp += '</a>';
                                         temp += '</div>';
+                                        temp += '<div class="col-sm-8">';
+                                            temp += '<ul class="post-data">';
+                                                temp += '<li>';
+                                                    temp += '<span>By ' + author + '</span>';
+                                                    temp += '<span><i class="fa fa-clock-o"></i>' + postDate + '</span>';
+                                                temp += '</li>';
+                                            temp += '</ul>';
+                                            temp += '<h3 class="title">';
+                                                temp += '<a href=href="' + link + '">';
+                                                    temp += title;
+                                                temp += '</a>';
+                                            temp += '</h3>';
+                                            temp += '<div class="category-content">';
+                                                temp += '<p class="clearfix">';
+                                                    temp += excerpt;
+                                                temp += '</p>';
+                                                temp += '<a class="readmore" href="' + link + '">Pročitajte više</a>';
+                                            temp += '</div>';
+                                        temp += '</div>';
                                     temp += '</div>';
+                                    temp += '<div class="borderLine"></div>';
                                 temp += '</div>';
                             temp += '</article>';
-                                                // temp += '&mdash; ' + title + '</a>' + excerpt + '';'
-
-
-
-
-
-                     // 	                   <a class="img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                     // 	                       <?php the_post_thumbnail(array(300,150)); # Declare pixel size you need inside the array ?>
-                     // 	                   </a>
-                     // 	               </div>
-                     // 	               <div class="col-sm-8">
-                     // 	                   <ul class="post-data">
-                     // 	                       <li>
-                     // 	                           <span>By <?php the_author_posts_link(); ?></span>
-                     // 	                           <span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
-                     // 	                           <span><i class="fa fa-eye"></i> <?php getPostViews(get_the_ID()); ?></span>
-                     // 	                           <span><i class="fa fa-comment-o"></i> <?php echo comments_number( '0', '1', '%' ); ?></span>
-                     // 	                       </li>
-                     // 	                   </ul>
-                     // 	                   <h3 class="title">
-                     // 	                       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-                     // 	                   </h3>
-                     // 	                   <div class="category-content">
-                     // 	                       <p class="clearfix">
-                     // 	                           <?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
-                     // 	                       </p>
-                     // 	                       <button class="readmore" href="<?php get_permalink(); ?>">READ MORE</button>
-                     // 	                   </div>
-                     // 	               </div>
-                     // 	           </div>
-                     // 	           <div class="borderLine"></div>
-                     // 	       </div>
-                     // 	   </article>
+                    // temp += '&mdash; ' + title + '</a>' + excerpt + '';'
                     //  filterTagContent.append('<div><a href=' + link + ' target="_blank">&mdash; ' + title + '</a>' + excerpt + '</div>');
                 		filterTagContent.append(temp);
                 	});
