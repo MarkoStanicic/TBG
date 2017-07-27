@@ -60,12 +60,14 @@
 		<!-- content -->
         <div class="container">
             <div class="col-sm-9">
-                <div class="col-md-12">
+                <div class="col-md-12"  id="currentContent">
+
 	            <?php
                     #get_template_part('partials/loop/loop', 'culture');
 					get_template_part('partials/loop/loop');
                 ?>
                 </div>
+				<div class="col-md-12" id="filterTagContent"></div>
             </div>
             <div class="col-sm-3">
 	            <?php get_sidebar(); ?>

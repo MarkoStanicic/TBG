@@ -30,32 +30,82 @@
                 //= create url
                 var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '';
             }
-            //= get element with post content
-            var postContentElement = $( '.single .col-sm-9' );
-            //= get json data from APU URI. 10 posts will be returned by default.
+            //= get element with post content && get element with tag content
+            var currentContent = $('#currentContent'),
+                filterTagContent = $('#filterTagContent');
+            //= get json data from API URI. 10 posts will be returned by default.
             if(tagArray.length > 0) {
                 //= set loader to postContentElement before it gets data
-                postContentElement.html( '<p>⌛️ Loading...</p>' );
+                currentContent.hide();
+                filterTagContent.show().html( '<p>⌛️ Loading...</p>' );
                 $.getJSON( '' + url + '', function( data ) {
                     console.log('url: ', url);
                 	//= empty the postContentElement
-                	postContentElement.empty();
+                	filterTagContent.empty();
                 	//= loop through each post
-                	console.log('data: ', data.length)
+                	console.log('DATA: ', data.length)
                 	$.each( data, function( i, post ){
-                		// console.log( post );
+                		console.log( post );
                 		var link = post.link,                     //= get post link
                 		    title = post.title.rendered,          //= get post title
                 		    excerpt = post.excerpt.rendered,      //= get post excerpt
                 		    content = post.content.rendered;      //= get post content
 
                         //= append data ftom each loop to postContentElement
-                		postContentElement.append('<div><a href=' + link + ' target="_blank">&mdash; ' + title + '</a>' + excerpt + '</div>' );
+                        var temp = '';
+                            temp += '<article>';
+                                temp += '<div class="col-sm-12">';
+                                    temp += '<div class="row">';
+                                        temp += '<div class="col-sm-4">';
+                                            temp += '<a class="img" href="' + link + '">';
+                                                // temp += '<img src="http://localhost:8888/Test/TBG/wp-json/wp/v2/media/' + post.featured_media + '" />'
+                                                temp +=  title + ' ' + post.featured_media + ' ' + post.featured_media.source_url;
+                                            temp += '</a>';
+                                        temp += '</div>';
+                                    temp += '</div>';
+                                temp += '</div>';
+                            temp += '</article>';
+                                                // temp += '&mdash; ' + title + '</a>' + excerpt + '';'
+
+
+
+
+
+                     // 	                   <a class="img" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                     // 	                       <?php the_post_thumbnail(array(300,150)); # Declare pixel size you need inside the array ?>
+                     // 	                   </a>
+                     // 	               </div>
+                     // 	               <div class="col-sm-8">
+                     // 	                   <ul class="post-data">
+                     // 	                       <li>
+                     // 	                           <span>By <?php the_author_posts_link(); ?></span>
+                     // 	                           <span><i class="fa fa-clock-o"></i> <?php echo get_post_time('F d, Y.'); ?></span>
+                     // 	                           <span><i class="fa fa-eye"></i> <?php getPostViews(get_the_ID()); ?></span>
+                     // 	                           <span><i class="fa fa-comment-o"></i> <?php echo comments_number( '0', '1', '%' ); ?></span>
+                     // 	                       </li>
+                     // 	                   </ul>
+                     // 	                   <h3 class="title">
+                     // 	                       <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                     // 	                   </h3>
+                     // 	                   <div class="category-content">
+                     // 	                       <p class="clearfix">
+                     // 	                           <?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
+                     // 	                       </p>
+                     // 	                       <button class="readmore" href="<?php get_permalink(); ?>">READ MORE</button>
+                     // 	                   </div>
+                     // 	               </div>
+                     // 	           </div>
+                     // 	           <div class="borderLine"></div>
+                     // 	       </div>
+                     // 	   </article>
+                    //  filterTagContent.append('<div><a href=' + link + ' target="_blank">&mdash; ' + title + '</a>' + excerpt + '</div>');
+                		filterTagContent.append(temp);
                 	});
                 });
             } else {
                 //= set no post element to postContentElement
-                postContentElement.html( '<p>Nema postova za odabran filter</p>' );
+                filterTagContent.html('');
+                currentContent.show();
             }
         });
         //================
