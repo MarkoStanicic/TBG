@@ -819,5 +819,3 @@ function add_past_events() {
 	foreach ( $past_events as $event )
 		echo "$event->post_title - $event->EventStartDate <br/>";
 }
-
-

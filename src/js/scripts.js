@@ -2,6 +2,11 @@
     'use strict';
 
     $(function () {
+
+        // $.getJSON("http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=95&filter[orderby]=data&_embed&callback=", function(a) {
+        //     $("body").append(a[0].content + "<p>&mdash; " + a[0].title + "</p>")
+        // });
+
         //================
         //= create array fom tag id's
         var tagArray = [];
@@ -20,7 +25,7 @@
                 });
                 console.log('tagArray removed: ', tagArray);
                 //= create url
-                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '';
+                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
             } else {
                 //= add active class
                 $(this).addClass('active');
@@ -28,7 +33,7 @@
                 tagArray.push(tagId);
                 console.log('tagArray: ', tagArray);
                 //= create url
-                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '';
+                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
             }
             //= get element with post content && get element with tag content
             var currentContent = $('#currentContent'),
@@ -38,21 +43,25 @@
                 //= set loader to postContentElement before it gets data
                 currentContent.hide();
                 filterTagContent.show().html( '<p>⌛️ Loading...</p>' );
+
                 $.getJSON( '' + url + '', function( data ) {
-                    console.log('url: ', url);
+                    console.log('data: ', data);
                 	//= empty the postContentElement
                 	filterTagContent.empty();
                 	//= loop through each post
                 	console.log('DATA: ', data.length)
-                	$.each( data, function( i, post ){
+                	$.each( data, function( i, post ) {
                 		console.log( post );
                 		var link = post.link,                     //= get post link
                 		    title = post.title.rendered,          //= get post title
                 		    excerpt = post.excerpt.rendered,      //= get post excerpt
                             content = post.content.rendered,      //= get post content
-                		    author = post.author,      //= get post content
-                            date = post.date;
+                            authorNum = post.author,
+                		    authorSLug = post._embedded.author[0].slug,   //= get post content
+                            date = post.date,
+                            imageUrl = post.better_featured_image.source_url;
 
+                        //= author slug
                         //= define date
                         var d = new Date(date);
                         var curr_date = d.getDate();
@@ -61,20 +70,20 @@
                         var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
                         var postDate = monthNames[curr_month] + ' ' + curr_date + ", " + curr_year + '.';
                         //= append data ftom each loop to postContentElement
+
                         var temp = '';
                             temp += '<article>';
                                 temp += '<div class="col-sm-12">';
                                     temp += '<div class="row">';
                                         temp += '<div class="col-sm-4">';
                                             temp += '<a class="img" href="' + link + '">';
-                                                // temp += '<img src="http://localhost:8888/Test/TBG/wp-json/wp/v2/media/' + post.featured_media + '" />'
-                                                temp +=  title;
+                                                temp += '<img src="' + imageUrl + '" />'
                                             temp += '</a>';
                                         temp += '</div>';
                                         temp += '<div class="col-sm-8">';
                                             temp += '<ul class="post-data">';
                                                 temp += '<li>';
-                                                    temp += '<span>By ' + author + '</span>';
+                                                    temp += '<span>By ' + authorSLug + '</span>';
                                                     temp += '<span><i class="fa fa-clock-o"></i>' + postDate + '</span>';
                                                 temp += '</li>';
                                             temp += '</ul>';
@@ -94,8 +103,8 @@
                                     temp += '<div class="borderLine"></div>';
                                 temp += '</div>';
                             temp += '</article>';
-                    // temp += '&mdash; ' + title + '</a>' + excerpt + '';'
-                    //  filterTagContent.append('<div><a href=' + link + ' target="_blank">&mdash; ' + title + '</a>' + excerpt + '</div>');
+
+                        //= append template with response
                 		filterTagContent.append(temp);
                 	});
                 });
