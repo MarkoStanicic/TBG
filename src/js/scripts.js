@@ -25,7 +25,7 @@
                 });
                 console.log('tagArray removed: ', tagArray);
                 //= create url
-                var url = 'http://www.thebelgradeguide.com/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
+                var url = 'http://thebelgradeguide.com/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
             } else {
                 //= add active class
                 $(this).addClass('active');
@@ -33,16 +33,19 @@
                 tagArray.push(tagId);
                 console.log('tagArray: ', tagArray);
                 //= create url
-                var url = 'http://www.thebelgradeguide.com/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
+                var url = 'http://thebelgradeguide.com/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
             }
             //= get element with post content && get element with tag content
             var currentContent = $('#currentContent'),
-                filterTagContent = $('#filterTagContent');
+                filterTagContent = $('#filterTagContent #fill');
             //= get json data from API URI. 10 posts will be returned by default.
             if(tagArray.length > 0) {
                 //= set loader to postContentElement before it gets data
                 currentContent.hide();
-                filterTagContent.show().html( '<p>⌛️ Loading...</p>' );
+                $('#filterTagContent .sectionTitle').show();
+                var loader = '';
+                    loader += '<div class="loader"></div>';
+                filterTagContent.show().html( loader );
 
                 $.getJSON( '' + url + '', function( data ) {
                     console.log('data: ', data);
@@ -59,7 +62,7 @@
                             authorNum = post.author,
                 		    authorSLug = post._embedded.author[0].slug,   //= get post content
                             date = post.date,
-                            imageUrl = post.better_featured_image.source_url;
+                            imageUrl = post.better_featured_image ? post.better_featured_image.source_url : '';
 
                         //= author slug
                         //= define date
@@ -105,11 +108,13 @@
                             temp += '</article>';
 
                         //= append template with response
+                        $('#filterTagContent .sectionTitle').show();
                 		filterTagContent.append(temp);
                 	});
                 });
             } else {
                 //= set no post element to postContentElement
+                $('#filterTagContent .sectionTitle').hide();
                 filterTagContent.html('');
                 currentContent.show();
             }

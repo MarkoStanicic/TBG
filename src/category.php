@@ -67,7 +67,12 @@
 					get_template_part('partials/loop/loop');
                 ?>
                 </div>
-				<div class="col-md-12" id="filterTagContent"></div>
+				<div class="col-md-12" id="filterTagContent">
+					<div class="sectionTitle">
+						<span class="title">Tag Filter</span>
+	                </div>
+					<div id="fill"></div>
+				</div>
             </div>
             <div class="col-sm-3">
 	            <?php get_sidebar(); ?>
