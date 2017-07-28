@@ -25,7 +25,7 @@
                 });
                 console.log('tagArray removed: ', tagArray);
                 //= create url
-                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
+                var url = 'http://www.thebelgradeguide.com/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
             } else {
                 //= add active class
                 $(this).addClass('active');
@@ -33,7 +33,7 @@
                 tagArray.push(tagId);
                 console.log('tagArray: ', tagArray);
                 //= create url
-                var url = 'http://localhost:8888/Test/TBG/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
+                var url = 'http://www.thebelgradeguide.com/wp-json/wp/v2/posts?tags=' + tagArray + '&filter[orderby]=data&_embed';
             }
             //= get element with post content && get element with tag content
             var currentContent = $('#currentContent'),
