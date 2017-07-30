@@ -820,3 +820,14 @@ function add_past_events() {
 	foreach ( $past_events as $event )
 		echo "$event->post_title - $event->EventStartDate <br/>";
 }
+
+
+// Events custom making 
+
+function get_post_meta_archive($key='', $post_type='Events'){
+                $this_month = date('Y-m').'-01';
+		global $wpdb;
+		// get event posts with $key from current month and onwards
+		$query = "SELECT YEAR(meta_value) AS `year`, MONTH(meta_value) AS `month`, count(ID) as posts FROM $wpdb->posts LEFT JOIN {$wpdb->postmeta} pm ON ($wpdb->posts.ID = pm.post_id) WHERE post_type = '" . $post_type . "' AND post_status = 'publish' AND meta_key = '" . $key . "' AND meta_value >= '" . $this_month . "' GROUP BY YEAR(meta_value), MONTH(meta_value) ORDER BY meta_value ASC";
+		return $wpdb->get_results($query);
+}
