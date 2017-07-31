@@ -6,7 +6,6 @@
 get_header();
 ?>
 
-
 <main role="main" aria-label="Content">
     <section class="category">
         <!-- slider -->

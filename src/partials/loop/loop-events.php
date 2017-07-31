@@ -15,11 +15,12 @@
 	</ul><!-- . / end breadcrumbs -->
 	<?php
 	   $args = array(
-	       'cat'            => $cat,
+	       'cat'  => $cat,
 		   'post_type' => 'Events',
 	       'posts_per_page' => 10,
-	       'orderby'        => 'date',
-	       'paged'          => $paged,
+	       'orderby'   => 'date',
+		   'type' => 'monthly',
+	       'paged'  => $paged,
 	   );
 	   query_posts( $args );
 	   while (have_posts()) : the_post();

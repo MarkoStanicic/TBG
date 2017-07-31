@@ -1,19 +1,31 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Archives
+*/
+get_header(); ?>
 
-	<main role="main" aria-label="Content">
-		<!-- section -->
-		<section>
+<div id="container">
+	<div id="content" role="main">
+		<?php the_post(); ?>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+		
+		<?php get_search_form(); ?>
 
-			<h1><?php _e( 'Archives', 'html5blank' ); ?></h1>
+		<?php wp_get_archives_cpt( 'post_type=Events' ); ?>
 
-			<?php get_template_part('loop'); ?>
+		<?php 
+		$args = array(
+    'post_type'    => 'your_custom_post_type',
+    'type'         => 'monthly',
+    'echo'         => 0
+);
+echo '<ul>'.wp_get_archives($args).'</ul>';
 
-			<?php get_template_part('pagination'); ?>
+?>
 
-		</section>
-		<!-- /section -->
-	</main>
+	</div><!-- #content -->
+</div><!-- #container -->
+
 
 <?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
