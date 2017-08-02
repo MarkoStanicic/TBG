@@ -103,6 +103,17 @@
 }
     //== Gallery stream
     .gallery-foot {
+      #wdi_feed_0 .wdi_feed_container {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+      #wdi_feed_0 .wdi_photo_wrap_inner {
+          border: none;
+          background-color: #26272b;
+          padding: 5px;
+      }
         #sb_instagram .sbi_photo img {
             -webkit-transition: 0.5s; /* Safari */
             transition: 0.5s;
