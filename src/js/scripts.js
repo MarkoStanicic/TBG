@@ -205,18 +205,6 @@
         //     // Options will go here
         // });
 
-        $(".acf-map").on('click', function() {
-
-            $.fancybox.open({
-                src  : '#hidden-content-1',
-                type : 'inline'
-            });
-
-		});
-
-		// popup is shown and map is not visible
-        google.maps.event.trigger(map, 'resize');
-
     });
 
     $ = jQuery.noConflict();

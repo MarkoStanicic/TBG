@@ -5,13 +5,13 @@
             <div class="col-sm-12">
                 <div class="sectionTitle">
                     <span class="title">
-                        Vesti iz nocnog zivota
+                        Naš Beograd
                     </span>
                 </div>
                 <div>
                     <?php
                     //== set category id
-                    $cat_id = 4;
+                    $cat_id = 146;
                     //== arguments
                     $args = array(
                         'posts_per_page' => 3,

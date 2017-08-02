@@ -107,9 +107,7 @@
                         </div>
                     </div>
                     <ul>
-	                    <?php
-	                    echo do_shortcode( '[instagram-feed]' );
-	                    ?>
+	                   <?php echo wdi_feed(array('id'=>'1')); ?>
                     </ul>
                 </div>
                 <div class="clearfix"></div>

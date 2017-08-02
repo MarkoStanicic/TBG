@@ -39,9 +39,7 @@
 	        </span>
 		</div>
 		<ul class="recent_gallery">
-			<?php
-			    echo do_shortcode( '[instagram-feed]' );
-			?>
+			<?php echo wdi_feed(array('id'=>'1')); ?>
 		</ul>
 	</div>
 </aside><!-- . / end sidebar -->

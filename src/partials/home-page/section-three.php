@@ -5,12 +5,12 @@
             <div class="col-sm-8 column">
                 <div class="sectionTitle">
                     <span class="title">
-                        Poslednji Postovi
+                       Dešavanja
                     </span>
                 </div>
                 <?php
                     //== set category id
-                    $cat_id_section_three = 19;
+                    $cat_id_section_three = 8;
                     //== arguments
                     $argsThree = array(
                         'posts_per_page' => 3,
