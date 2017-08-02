@@ -16,7 +16,6 @@
                     $args = array(
                         'posts_per_page' => 3,
                         'cat' => $cat_id,
-                        'offset'=> 8
                     );
                     query_posts($args);
                     while (have_posts()) : the_post();
