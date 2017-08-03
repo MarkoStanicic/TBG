@@ -815,22 +815,23 @@ p {
 .sidebar .side-gallery {
   margin-top: 40px; }
 
-.wdi_feed_users {
-  display: none; }
+/*.wdi_feed_users {
+        display: none;
+      }
+      .wdi_feed_wrapper {
+          background-color: #26272b;
+      }
 
-.wdi_feed_wrapper {
-  background-color: #26272b; }
-
-.wdi_feed_container {
-  width: 100%;
-  background-color: #26272b;
-  border: none; }
-
-.wdi_photo_wrap_inner {
-  border: none;
-  background-color: #26272b;
-  padding: 5px; }
-
+      .wdi_feed_container {
+          width: 100%;
+          background-color: #26272b;
+          border: none;
+      }
+     .wdi_photo_wrap_inner {
+          border: none;
+          background-color: #26272b;
+          padding: 5px;
+      }*/
 .single .single-cnt {
   margin-top: 40px; }
 
@@ -1300,21 +1301,21 @@ p {
     text-transform: uppercase;
     font-size: 11px; }
 
-.gallery-foot .wdi_feed_users {
-  display: none; }
+.gallery-foot #sb_instagram .sbi_photo img {
+  -webkit-transition: 0.5s;
+  /* Safari */
+  transition: 0.5s; }
 
-.gallery-foot .wdi_feed_wrapper {
-  background-color: #26272b; }
-
-.gallery-foot .wdi_feed_container {
-  width: 100%;
-  background-color: #26272b;
-  border: none; }
-
-.gallery-foot .wdi_photo_wrap_inner {
-  border: none;
-  background-color: #26272b;
-  padding: 5px; }
+.gallery-foot #sb_instagram .sbi_photo img:hover {
+  -webkit-transform: scale(1.1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.1);
+  /* Firefox */
+  -ms-transform: scale(1.1);
+  /* IE 9 */
+  -o-transform: scale(1.1);
+  /* Opera */
+  transform: scale(1.1); }
 
 .social-footer ul li {
   float: left; }

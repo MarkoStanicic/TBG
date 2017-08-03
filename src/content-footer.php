@@ -3,8 +3,8 @@
  * The Footer template
  *
  * @package WordPress
- * @subpackage KUD
- * @since KUD 1.0
+ * @subpackage TBG
+ * @since TBG 1.0
  */
 ?>
 
@@ -107,7 +107,9 @@
                         </div>
                     </div>
                     <ul>
-	                   <?php echo wdi_feed(array('id'=>'1')); ?>
+	                  <?php
+	                    echo do_shortcode( '[instagram-feed]' );
+	                    ?>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
