@@ -128,7 +128,7 @@
 									endif;
 									?>
 									<ul>
-										<li>Website: <?php echo $web . '' ?></li>
+										<li>Website: <a href=" <?php echo $web . '' ?>"> <?php echo $web . '' ?></a></li>
 										<li><i class="fa fa-facebook-square" aria-hidden="true"></i> <?php echo $face . '' ?></li>
 									</ul>
 								</div>
