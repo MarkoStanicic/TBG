@@ -39,7 +39,7 @@
 	        </span>
 		</div>
 		<ul class="recent_gallery">
-			<?php echo wdi_feed(array('id'=>'1')); ?>
+			<?php echo wdi_feed(array('id'=>'2')); ?>
 		</ul>
 	</div>
 </aside><!-- . / end sidebar -->
