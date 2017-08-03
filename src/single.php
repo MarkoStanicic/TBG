@@ -114,6 +114,23 @@
 										<li><?php echo $sub . '' ?></li>
 										<li><?php echo $ned . '' ?></li>
 									</ul>
+									<?php
+
+									if( have_rows('info') ):
+
+										while( have_rows('info') ) : the_row();
+
+											$web = get_sub_field('website');
+											$face = get_sub_field('facebook');
+
+										endwhile;
+
+									endif;
+									?>
+									<ul>
+										<li>Website: <?php echo $web . '' ?></li>
+										<li><i class="fa fa-facebook-square" aria-hidden="true"></i> <?php echo $face . '' ?></li>
+									</ul>
 								</div>
 							</div>
 						</div>
