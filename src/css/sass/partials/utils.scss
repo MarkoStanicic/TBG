@@ -29,6 +29,10 @@ a, a:hover, a:focus {
 
 a {
 	color: $link;
+
+	&:hover {
+		color: $blue-light;
+	}
 }
 
 b, strong {
