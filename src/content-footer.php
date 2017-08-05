@@ -123,13 +123,13 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="#">
-                                <span class="fa fa-facebook"></span>
+                            <a href="https://www.instagram.com/thebelgradeguide/">
+                                <span class="fa fa-instagram"></span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa fa-instagram"></span>
+                         <li>
+                            <a href="https://www.facebook.com/thebelgradeguide/">
+                                <span class="fa fa-facebook"></span>
                             </a>
                         </li>
                         <li>

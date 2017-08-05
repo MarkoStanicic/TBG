@@ -121,10 +121,18 @@
                     border-radius:4px;
                     margin-top: -25px;
 
+                    a {
+                                  color: $blue;
+                       }
+
                 }
                 .single-content {
                         .col-sm-8 {
                             background: #fff;
+
+                            a {
+                                        color: $blue;
+                                }
                         }
                         p {
                                 line-height: 1.6;

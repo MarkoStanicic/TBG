@@ -932,9 +932,13 @@ p {
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin-top: -25px; }
+  .single article .col-sm-12 a {
+    color: #48B0ED; }
 
 .single article .single-content .col-sm-8 {
   background: #fff; }
+  .single article .single-content .col-sm-8 a {
+    color: #48B0ED; }
 
 .single article .single-content p {
   line-height: 1.6;
@@ -1569,9 +1573,13 @@ p {
   -moz-border-radius: 4px;
   border-radius: 4px;
   margin-top: -25px; }
+  .single article .col-sm-12 a {
+    color: #48B0ED; }
 
 .single article .single-content .col-sm-8 {
   background: #fff; }
+  .single article .single-content .col-sm-8 a {
+    color: #48B0ED; }
 
 .single article .single-content p {
   line-height: 1.6;
