@@ -6833,6 +6833,9 @@ a, a:hover, a:focus {
   outline: none;
   text-decoration: none; }
 
+a {
+  color: #41A3CC; }
+
 b, strong {
   font-weight: bold; }
 
