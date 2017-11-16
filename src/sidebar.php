@@ -40,7 +40,7 @@
 		</div>
 		<ul class="recent_gallery">
 			<?php
-	        	 echo do_shortcode( '[instagram-feed]' );
+	        	 echo do_shortcode( '[instagram-feed num=4 cols=2]' );
 	        ?>
 		</ul>
 	</div>

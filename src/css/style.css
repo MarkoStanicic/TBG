@@ -971,6 +971,7 @@ p {
   background: #fff; }
 
 .single article .contact-details .widget {
+  overflow: hidden;
   background: #fff;
   padding: 15px;
   border-radius: 4px;
@@ -1608,6 +1609,7 @@ p {
   background: #fff; }
 
 .single article .contact-details .widget {
+  overflow: hidden;
   background: #fff;
   padding: 15px;
   border-radius: 4px;
