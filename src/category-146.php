@@ -63,15 +63,8 @@
 				<div class="col-md-12"  id="currentContent">
 
 					<?php
-					#get_template_part('partials/loop/loop', 'culture');
 					get_template_part('partials/loop/loop');
 					?>
-				</div>
-				<div class="col-md-12" id="filterTagContent">
-					<div class="sectionTitle">
-						<span class="title">Tag Filter</span>
-					</div>
-					<div id="fill"></div>
 				</div>
 			</div>
 			<div class="col-sm-3">
